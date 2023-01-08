@@ -1,0 +1,24 @@
+H:/Documents/PASS3/PASS3/obj/Debug/PASS3.csprojResolveAssemblyReference.cache
+H:/Documents/PASS3/PASS3/obj/Debug/PASS3.csproj.CoreCompileInputs.cache
+/run/media/chicken10dys/Ventoy/PASS3/PASS3/bin/Debug/PASS3.exe.config
+/run/media/chicken10dys/Ventoy/PASS3/PASS3/bin/Debug/PASS3.exe
+/run/media/chicken10dys/Ventoy/PASS3/PASS3/bin/Debug/PASS3.pdb
+/run/media/chicken10dys/Ventoy/PASS3/PASS3/bin/Debug/Animation2D.dll
+/run/media/chicken10dys/Ventoy/PASS3/PASS3/bin/Debug/MonoGame.Framework.dll
+/run/media/chicken10dys/Ventoy/PASS3/PASS3/bin/Debug/MonoGame.Framework.xml
+/run/media/chicken10dys/Ventoy/PASS3/PASS3/obj/Debug/PASS3.csprojAssemblyReference.cache
+/run/media/chicken10dys/Ventoy/PASS3/PASS3/obj/Debug/PASS3.csproj.CoreCompileInputs.cache
+/run/media/chicken10dys/Ventoy/PASS3/PASS3/obj/Debug/PASS3.csproj.CopyComplete
+/run/media/chicken10dys/Ventoy/PASS3/PASS3/obj/Debug/PASS3.exe
+/run/media/chicken10dys/Ventoy/PASS3/PASS3/obj/Debug/PASS3.pdb
+/home/chicken10dys/Desktop/PASS3 but i try to fix movement/PASS3/bin/Debug/PASS3.exe.config
+/home/chicken10dys/Desktop/PASS3 but i try to fix movement/PASS3/bin/Debug/PASS3.exe
+/home/chicken10dys/Desktop/PASS3 but i try to fix movement/PASS3/bin/Debug/PASS3.pdb
+/home/chicken10dys/Desktop/PASS3 but i try to fix movement/PASS3/bin/Debug/Animation2D.dll
+/home/chicken10dys/Desktop/PASS3 but i try to fix movement/PASS3/bin/Debug/MonoGame.Framework.dll
+/home/chicken10dys/Desktop/PASS3 but i try to fix movement/PASS3/bin/Debug/MonoGame.Framework.xml
+/home/chicken10dys/Desktop/PASS3 but i try to fix movement/PASS3/obj/Debug/PASS3.csprojAssemblyReference.cache
+/home/chicken10dys/Desktop/PASS3 but i try to fix movement/PASS3/obj/Debug/PASS3.csproj.CoreCompileInputs.cache
+/home/chicken10dys/Desktop/PASS3 but i try to fix movement/PASS3/obj/Debug/PASS3.csproj.CopyComplete
+/home/chicken10dys/Desktop/PASS3 but i try to fix movement/PASS3/obj/Debug/PASS3.exe
+/home/chicken10dys/Desktop/PASS3 but i try to fix movement/PASS3/obj/Debug/PASS3.pdb
