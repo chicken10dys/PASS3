@@ -27,7 +27,7 @@ namespace PASS3
         static Random rng = new Random();
 
         //Store max number of balls
-        const int NUMBALLS = 2;
+        const int NUMBALLS = 3;
         //Store max number of bullets
         const int NUMBULLETS = 2;
         
@@ -124,13 +124,14 @@ namespace PASS3
         
         //Store bullet movement stuff
         
-        bool[] isShooting = new bool[NUMBULLETS]{false, false};
-        float bulletSpeed = 1f;
+        bool[] isShooting = new bool[NUMBULLETS];
+        float bulletSpeed = 2f;
         Vector2[] bulletPos = new Vector2[NUMBULLETS];
         int[] bulletDir = new int[NUMBULLETS];
         
-        //TEST
+        //Store performance
         int hits;
+        int miss;
 
         public Game1()
         {
@@ -188,11 +189,16 @@ namespace PASS3
             
             //Load vector2
             textLoc = new Vector2(0, (int)(100 * scale));
-
+            
+            //set up balls and bullets
             for (int i = 0; i < NUMBALLS; i++)
             {
                 path[i] = rng.Next(0,4);
                 speed[i] = (rng.Next(10, 31) / 10);
+            }
+            for (int i = 0; i < NUMBULLETS; i++)
+            {
+                isShooting[i] = false;
             }
             base.Initialize();
         }
@@ -323,8 +329,8 @@ namespace PASS3
                     {
                         ballPos[i].X = ballRec[i].X;
                         ballPos[i].Y = ballRec[i].Y;
-                        ballPos[i].X = ballPos[i].X + (dirX[path[i]] * speed[i]);
-                        ballPos[i].Y = ballPos[i].Y + (dirY[path[i]] * speed[i]);
+                        ballPos[i].X = (float)(ballPos[i].X + (dirX[path[i]] * (speed[i] * scale)));
+                        ballPos[i].Y = (float)(ballPos[i].Y + (dirY[path[i]] * (speed[i] * scale)));
                         ballRec[i].X = (int)ballPos[i].X;
                         ballRec[i].Y = (int)ballPos[i].Y;
                         
@@ -355,8 +361,8 @@ namespace PASS3
                     {
                         bulletPos[i].X = bulletRec[i].X;
                         bulletPos[i].Y = bulletRec[i].Y;
-                        bulletPos[i].X = bulletPos[i].X + ((dirX[bulletDir[i]] * -1) * bulletSpeed);
-                        bulletPos[i].Y = bulletPos[i].Y + ((dirY[bulletDir[i]] * -1) * bulletSpeed);
+                        bulletPos[i].X = (float)(bulletPos[i].X + ((dirX[bulletDir[i]] * -1) * (bulletSpeed * scale)));
+                        bulletPos[i].Y = (float)(bulletPos[i].Y + ((dirY[bulletDir[i]] * -1) * (bulletSpeed * scale)));
                         bulletRec[i].X = (int)bulletPos[i].X;
                         bulletRec[i].Y = (int)bulletPos[i].Y;
                     }
@@ -437,7 +443,8 @@ namespace PASS3
 
                     
                     //TEST
-                    Console.WriteLine(bulletSpeed);
+                    Console.WriteLine("Hits: " + hits);
+                    Console.WriteLine("Misses: : " + miss);
                     
                     //spriteBatch.DrawString((font * scale), "test", textLoc, Color.White);
                     
@@ -491,8 +498,8 @@ namespace PASS3
                 ballRec[i] = possibleSpawns[path[i]];
                 
                 //Scale the speed
-                speed[i] = (float)(speed[i] * scale);
-                bulletSpeed = (float)(bulletSpeed * scale);
+                //speed[i] = (float)(speed[i] * scale);
+                //bulletSpeed = (float)(bulletSpeed * scale);
                 
                 //Generate a random colour for each ball
                 randomBallColour[i] = rng.Next(0,randomColour.Length);
@@ -504,6 +511,7 @@ namespace PASS3
             
             for (int i = 0; i < NUMBALLS; i++)
             {
+                //Check for a miss and reset the ball
                 if (centerRec.Contains(ballRec[i]))
                 {
                     //Regenerate random spawn
@@ -515,13 +523,14 @@ namespace PASS3
                     //Regenerate random speed
                     speed[i] = (rng.Next(10, 31) / 10);
                     //Scale the speed
-                    speed[i] = (float)(speed[i] * scale);
+                    //speed[i] = (float)(speed[i] * scale);
                     //Regenerate a random colour for each ball
                     for (int ii = 0; ii < NUMBALLS; ii++)
                         randomBallColour[ii] = rng.Next(0,randomColour.Length);
-                
+                    miss ++;
                 }
 
+                //Check for a hit and reset both the bullet and the ball
                 for (int ii = 0; ii < NUMBULLETS; ii++)
                 {
                     if (ballRec[i].Contains(bulletRec[ii]) && isShooting[ii] == true)
@@ -537,7 +546,7 @@ namespace PASS3
                         //Regenerate random speed
                         speed[i] = (rng.Next(10, 31) / 10);
                         //Scale the speed
-                        speed[i] = (float)(speed[i] * scale);
+                        //speed[i] = (float)(speed[i] * scale);
                         //Regenerate a random colour for each ball
                         for (int iii = 0; iii < NUMBALLS; iii++)
                             randomBallColour[iii] = rng.Next(0,randomColour.Length);
