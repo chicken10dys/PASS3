@@ -9,6 +9,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
+
 //using Microsoft.Xna.Framework.Content.Pipeline.Serialization.Compiler;
 
 namespace PASS3
@@ -24,11 +26,19 @@ namespace PASS3
         //Random number setup
         static Random rng = new Random();
 
+        //Store max number of balls
+        const int NUMBALLS = 2;
+        //Store max number of bullets
+        const int NUMBULLETS = 2;
+        
         //General storage
         //Store colours
         Color[] randomColour = new Color[9] {Color.Red, Color.Orange, Color.Yellow, Color.Green, Color.Blue, Color.Indigo, Color.Violet, Color.Magenta, Color.Aqua};
+        int[] randomBallColour = new int[NUMBALLS];
         //Store random colour
         int randomColourNum;
+        //Store if coloured balls is on or off
+        bool colouredBalls = false;
 
         //Store window size
         int screenWidth;
@@ -58,9 +68,6 @@ namespace PASS3
         const int LEFT = 2;
         const int RIGHT = 3;
         int selectedArrow;
-        
-        //Store max number of balls
-        const int NUMBALLS = 100;
 
         //Stuff related to sprites and their positions
         Texture2D blank;
@@ -74,17 +81,22 @@ namespace PASS3
         //Fonts
         SpriteFont font;
         
+        //Font locations
+        Vector2 warningLoc;
+        
         //UI
         Rectangle playBtnRec;
         Rectangle exitBtnRec;
         Rectangle playAreaRec;
-        
-        
+
         //Game stuff
+        //Balls and paths
         Rectangle horizontalRowRec;
         Rectangle verticalRowRec;
-        
         Rectangle[] ballRec = new Rectangle[NUMBALLS];
+        
+        //Shooting related
+        Rectangle[] bulletRec = new Rectangle[NUMBULLETS];
         Rectangle arrowRec;
         Rectangle centerRec;
         
@@ -106,6 +118,17 @@ namespace PASS3
         const int RIGHTPATH = 3;
         Rectangle[] possibleSpawns = new Rectangle[4];
         int[] path = new int [NUMBALLS];
+        
+        //Store the bullet spawns
+        Rectangle[] bulletSpawns = new Rectangle[4];
+        
+        //Store bullet movement stuff
+        
+        bool[] isShooting = new bool[NUMBULLETS]{false, false};
+        float bulletSpeed = 1f;
+        Vector2[] bulletPos = new Vector2[NUMBULLETS];
+        int[] bulletDir = new int[NUMBULLETS];
+        
         //TEST
         int hits;
 
@@ -213,10 +236,7 @@ namespace PASS3
             //Update window size
             screenWidth = graphics.GraphicsDevice.Viewport.Width;
             screenHeight = graphics.GraphicsDevice.Viewport.Height;
-
-            //Make a hitbox for the center
-            centerRec = new Rectangle(Convert.ToInt32((screenHeight / 2) - (screenHeight / 24)), Convert.ToInt32((screenHeight / 2) - screenHeight / 24), screenHeight / 12, screenHeight / 12);
-
+            
             //Update stuff based on gamestate
             switch (gamestate)
             {
@@ -228,8 +248,6 @@ namespace PASS3
                         randomColourNum = rng.Next(0, randomColour.Length);
                         CalcPos();
                         gamestate = GAME;
-                        
-                        
                     }
                     if (exitBtnRec.Contains(mouse.Position) && mouse.LeftButton == ButtonState.Pressed)
                         Exit();
@@ -256,6 +274,8 @@ namespace PASS3
                     playBtnRec = new Rectangle(((screenWidth / 2) - (playBtnImg.Width / 2)), ((screenHeight / 2) - (playBtnImg.Height / 2) - 50), playBtnImg.Width, playBtnImg.Height);
                     exitBtnRec = new Rectangle(((screenWidth / 2) - (exitBtnImg.Width / 2)), ((screenHeight / 2) - (exitBtnImg.Height / 2) + 50), exitBtnImg.Width, exitBtnImg.Height);
                     
+                    warningLoc = new Vector2((screenHeight / 2) - (font.MeasureString("WARNING:\nflashing colours may cause seizure").X / 2), 0);
+                    
                     break;
 
                 case GAME:
@@ -268,7 +288,7 @@ namespace PASS3
                     if (kb.IsKeyDown(Keys.Space) && kb != prevKb)
                     {
                         randomColourNum = rng.Next(0, randomColour.Length);
-                        hits ++;
+                        
                     }
 
                         
@@ -310,21 +330,42 @@ namespace PASS3
                         
                     }
                     
-                    /*ballPos[0].X = ballRec[0].X;
-                    ballPos[0].Y = ballRec[0].Y;
-                    ballPos[0].X = ballPos[0].X + (dirX[path[0]] * speed);
-                    ballPos[0].Y = ballPos[0].Y + (dirY[path[0]] * speed);
-                    ballRec[0].X = (int)ballPos[0].X;
-                    ballRec[0].Y = (int)ballPos[0].Y;
+                    for (int i = 0; i < NUMBULLETS; i++)
+                        if(isShooting[i] == false)
+                            bulletRec[i] = bulletSpawns[selectedArrow];
                     
-                    ballPos[1].X = ballRec[1].X;
-                    ballPos[1].Y = ballRec[1].Y;
-                    ballPos[1].X = ballPos[1].X + (dirX[path[1]] * speed);
-                    ballPos[1].Y = ballPos[1].Y + (dirY[path[1]] * speed);
-                    ballRec[1].X = (int)ballPos[1].X;
-                    ballRec[1].Y = (int)ballPos[1].Y;*/
-
-
+                    //Shoot ball
+                    if (kb.IsKeyDown(Keys.Space) && kb != prevKb && !prevKb.IsKeyDown(Keys.Space))
+                    {
+                        for (int i = 0; i < NUMBULLETS; i++)
+                        {
+                            if (isShooting[i] != true)
+                            {
+                                isShooting[i] = !isShooting[i];
+                                bulletDir[i] = selectedArrow;
+                                break;
+                            }
+                        }
+                        
+                    }
+                    
+                    
+                    //Update bullet position
+                    for (int i = 0; i < NUMBULLETS; i++)
+                    {
+                        bulletPos[i].X = bulletRec[i].X;
+                        bulletPos[i].Y = bulletRec[i].Y;
+                        bulletPos[i].X = bulletPos[i].X + ((dirX[bulletDir[i]] * -1) * bulletSpeed);
+                        bulletPos[i].Y = bulletPos[i].Y + ((dirY[bulletDir[i]] * -1) * bulletSpeed);
+                        bulletRec[i].X = (int)bulletPos[i].X;
+                        bulletRec[i].Y = (int)bulletPos[i].Y;
+                    }
+                    
+                    
+                    if(kb.IsKeyDown(Keys.E) && kb != prevKb)
+                        colouredBalls = !colouredBalls;
+                    
+                    
                     //Check for ball death
                     CheckBallDeath();
 
@@ -363,6 +404,10 @@ namespace PASS3
                     GraphicsDevice.Clear(randomColour[randomColourNum]);
                     spriteBatch.Draw(playBtnImg, playBtnRec, Color.White);
                     spriteBatch.Draw(exitBtnImg, exitBtnRec, Color.White);
+                    if(randomColourNum != 0)
+                        spriteBatch.DrawString(font, "WARNING:\nflashing colours may cause seizure", warningLoc, Color.Red);
+                    if(randomColourNum == 0)
+                        spriteBatch.DrawString(font, "WARNING:\nflashing colours may cause seizure", warningLoc, Color.White);
                     break;
 
                 case GAME:
@@ -370,17 +415,29 @@ namespace PASS3
                     spriteBatch.Draw(blank, playAreaRec, Color.Black * 0.5f);
                     spriteBatch.Draw(blank, horizontalRowRec, Color.Black * 0.5f);
                     spriteBatch.Draw(blank, verticalRowRec, Color.Black * 0.5f);
-                    for (int i = 0; i < NUMBALLS; i++)
+                    if (colouredBalls == true)
                     {
-                        spriteBatch.Draw(ballImg, ballRec[i], Color.White);
+                        for (int i = 0; i < NUMBALLS; i++)
+                        {
+                            spriteBatch.Draw(ballImg, ballRec[i], randomColour[randomBallColour[i]]);
+                        }
+                    }
+                    if (colouredBalls == false)
+                    {
+                        for (int i = 0; i < NUMBALLS; i++)
+                        {
+                            spriteBatch.Draw(ballImg, ballRec[i], Color.White);
+                        }
                     }
                     
                     spriteBatch.Draw(blank, centerRec, Color.Black);
                     spriteBatch.Draw(arrow[selectedArrow], arrowRec, randomColour[randomColourNum]);
+                    for (int i = 0; i < NUMBULLETS; i++)
+                        spriteBatch.Draw(ballImg, bulletRec[i], randomColour[randomColourNum]);
 
                     
                     //TEST
-                    Console.WriteLine(hits);
+                    Console.WriteLine(bulletSpeed);
                     
                     //spriteBatch.DrawString((font * scale), "test", textLoc, Color.White);
                     
@@ -411,17 +468,34 @@ namespace PASS3
             playAreaRec = new Rectangle(((screenWidth - screenHeight) / 2), 0, screenHeight, screenHeight);
             horizontalRowRec = new Rectangle(((screenWidth - screenHeight) / 2), ((screenHeight / 2) - (screenHeight / 24)), screenHeight, (screenHeight / 12));
             verticalRowRec = new Rectangle(((screenWidth / 2) - (screenHeight / 24)), 0, (screenHeight / 12), screenHeight);
+            //Make a hitbox for the center
+            centerRec = new Rectangle(Convert.ToInt32((screenHeight / 2) - (screenHeight / 24)), Convert.ToInt32((screenHeight / 2) - screenHeight / 24), screenHeight / 12, screenHeight / 12);
 
             //Balls
             possibleSpawns[0] = new Rectangle((int)((screenHeight / 2) - 8 * scale), 0, (int)(16 * scale), (int)(16 * scale));
             possibleSpawns[1] = new Rectangle((int)((screenHeight / 2) - 8 * scale), (int)(screenHeight - (16 * scale)), (int)(16 * scale), (int)(16 * scale));
             possibleSpawns[2] = new Rectangle(0, (int)((screenHeight / 2) - 8 * scale), (int)(16 * scale), (int)(16 * scale));
             possibleSpawns[3] = new Rectangle((int)(screenHeight - (16 * scale)), (int)((screenHeight / 2) - 8 * scale), (int)(16 * scale), (int)(16 * scale));
+            
+            //Arrow and bullets
             arrowRec = new Rectangle(Convert.ToInt32((screenHeight / 2) - (screenHeight / 24)), Convert.ToInt32((screenHeight / 2) - screenHeight / 24), screenHeight / 12, screenHeight / 12);
+            bulletSpawns[0] = new Rectangle(Convert.ToInt32((screenHeight / 2) - (4 * scale)),Convert.ToInt32((screenHeight / 2) - (screenHeight / 24) - (8 * scale)),(int)(8 * scale),(int)(8 * scale));
+            bulletSpawns[1] = new Rectangle(Convert.ToInt32((screenHeight / 2) - (4 * scale)),Convert.ToInt32((screenHeight / 2) + (screenHeight / 24)),(int)(8 * scale),(int)(8 * scale));
+            bulletSpawns[2] = new Rectangle(Convert.ToInt32((screenHeight / 2) - (screenHeight / 24) - (8 * scale)),Convert.ToInt32((screenHeight / 2) - (int)(4 * scale)),(int)(8 * scale),(int)(8 * scale));
+            bulletSpawns[3] = new Rectangle(Convert.ToInt32((screenHeight / 2) + (screenHeight / 24) ),Convert.ToInt32((screenHeight / 2) - (4 * scale)),(int)(8 * scale),(int)(8 * scale));
+            
 
             for (int i = 0; i < NUMBALLS; i++)
             {
+                //Generate a spawn for each ball
                 ballRec[i] = possibleSpawns[path[i]];
+                
+                //Scale the speed
+                speed[i] = (float)(speed[i] * scale);
+                bulletSpeed = (float)(bulletSpeed * scale);
+                
+                //Generate a random colour for each ball
+                randomBallColour[i] = rng.Next(0,randomColour.Length);
             }
         }
 
@@ -440,7 +514,43 @@ namespace PASS3
                     randomColourNum = rng.Next(0,randomColour.Length);
                     //Regenerate random speed
                     speed[i] = (rng.Next(10, 31) / 10);
+                    //Scale the speed
+                    speed[i] = (float)(speed[i] * scale);
+                    //Regenerate a random colour for each ball
+                    for (int ii = 0; ii < NUMBALLS; ii++)
+                        randomBallColour[ii] = rng.Next(0,randomColour.Length);
                 
+                }
+
+                for (int ii = 0; ii < NUMBULLETS; ii++)
+                {
+                    if (ballRec[i].Contains(bulletRec[ii]) && isShooting[ii] == true)
+                    {
+                        isShooting[ii] = false;
+                        
+                        //Regenerate random spawn
+                        path[i] = rng.Next(0,4);
+                        //Set ball rec to new random spawn
+                        ballRec[i] = possibleSpawns[path[i]];
+                        //Regenerate random colour
+                        randomColourNum = rng.Next(0,randomColour.Length);
+                        //Regenerate random speed
+                        speed[i] = (rng.Next(10, 31) / 10);
+                        //Scale the speed
+                        speed[i] = (float)(speed[i] * scale);
+                        //Regenerate a random colour for each ball
+                        for (int iii = 0; iii < NUMBALLS; iii++)
+                            randomBallColour[iii] = rng.Next(0,randomColour.Length);
+                        hits ++;
+                    }
+                }
+            }
+
+            for (int i = 0; i < NUMBULLETS; i++)
+            {
+                if(bulletRec[i].X > screenHeight || bulletRec[i].X < 0 || bulletRec[i].Y > screenHeight || bulletRec[i].Y < 0)
+                {
+                    isShooting[i] = false;
                 }
             }
         }
