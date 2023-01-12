@@ -427,6 +427,7 @@ namespace PASS3
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
+
             spriteBatch.Begin();
             switch (gamestate)
             {
