@@ -9,7 +9,6 @@
       <change beforePath="$PROJECT_DIR$/PASS3/Game1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Game1.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/PASS3.exe" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/bin/Debug/PASS3.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/PASS3.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/bin/Debug/PASS3.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/obj/Debug/PASS3.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/obj/Debug/PASS3.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PASS3/obj/Debug/PASS3.exe" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/obj/Debug/PASS3.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PASS3/obj/Debug/PASS3.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/obj/Debug/PASS3.pdb" afterDir="false" />
     </list>
@@ -31,24 +30,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/run/media/chicken10dys/Ventoy/PASS3",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/run/media/chicken10dys/Ventoy/PASS3&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "/home/chicken10dys/.config/JetBrains/Rider2022.3/resharper-host/DecompilerCache",
-      "/home/chicken10dys/.config/JetBrains/Rider2022.3/resharper-host/SourcesCache",
-      "/home/chicken10dys/.local/share/Symbols/src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;/home/chicken10dys/.config/JetBrains/Rider2022.3/resharper-host/DecompilerCache&quot;,
+      &quot;/home/chicken10dys/.config/JetBrains/Rider2022.3/resharper-host/SourcesCache&quot;,
+      &quot;/home/chicken10dys/.local/share/Symbols/src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="PASS3" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -123,7 +122,10 @@
       <workItem from="1673376313108" duration="4534000" />
       <workItem from="1673401067376" duration="4367000" />
       <workItem from="1673444053450" duration="1136000" />
-      <workItem from="1673462702201" duration="2440000" />
+      <workItem from="1673462702201" duration="3898000" />
+      <workItem from="1673498490263" duration="979000" />
+      <workItem from="1673538375656" duration="920000" />
+      <workItem from="1673539540786" duration="1279000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1671545012218</created>
@@ -181,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673402947512</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="added some stats in the terminal output and fixed some issues with speed scaling">
+      <created>1673465219704</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1673465219704</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,7 +217,8 @@
     <MESSAGE value="initial push" />
     <MESSAGE value="Initial release. Has movement, paths, cursor, and colour done" />
     <MESSAGE value="Added shooting!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added shooting!" />
+    <MESSAGE value="added some stats in the terminal output and fixed some issues with speed scaling" />
+    <option name="LAST_COMMIT_MESSAGE" value="added some stats in the terminal output and fixed some issues with speed scaling" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

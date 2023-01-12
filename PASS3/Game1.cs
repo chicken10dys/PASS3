@@ -30,6 +30,8 @@ namespace PASS3
         const int NUMBALLS = 3;
         //Store max number of bullets
         const int NUMBULLETS = 2;
+        //Store origional lives
+        const int LIVES = 10;
         
         //General storage
         //Store colours
@@ -80,10 +82,7 @@ namespace PASS3
 
         //Fonts
         SpriteFont font;
-        
-        //Font locations
-        Vector2 warningLoc;
-        
+
         //UI
         Rectangle playBtnRec;
         Rectangle exitBtnRec;
@@ -101,7 +100,10 @@ namespace PASS3
         Rectangle centerRec;
         
         //Vector2 for fonts
-        Vector2 textLoc;
+        Vector2 warningLoc;
+        Vector2 DeathMsgLoc;
+        Vector2[] DeathPointsLoc = new Vector2[2];
+        Vector2 RestartMsgLoc;
         
         //Movement stuff
         Vector2[] ballPos = new Vector2[NUMBALLS];                 //Stores the ball’s true position
@@ -132,6 +134,7 @@ namespace PASS3
         //Store performance
         int hits;
         int miss;
+        int lives = LIVES; 
 
         public Game1()
         {
@@ -186,20 +189,8 @@ namespace PASS3
             playAreaRec = new Rectangle(((screenWidth - screenHeight) / 2), 0, screenHeight, screenHeight);
             horizontalRowRec = new Rectangle(((screenWidth - screenHeight) / 2), ((screenHeight / 2) - (screenHeight / 16)), screenHeight, (screenHeight / 8));
             verticalRowRec = new Rectangle(((screenWidth / 2) - (screenHeight / 16)), 0, (screenHeight / 8), screenHeight);
-            
-            //Load vector2
-            textLoc = new Vector2(0, (int)(100 * scale));
-            
-            //set up balls and bullets
-            for (int i = 0; i < NUMBALLS; i++)
-            {
-                path[i] = rng.Next(0,4);
-                speed[i] = (rng.Next(10, 31) / 10);
-            }
-            for (int i = 0; i < NUMBULLETS; i++)
-            {
-                isShooting[i] = false;
-            }
+
+            Setup();
             base.Initialize();
         }
 
@@ -280,7 +271,9 @@ namespace PASS3
                     playBtnRec = new Rectangle(((screenWidth / 2) - (playBtnImg.Width / 2)), ((screenHeight / 2) - (playBtnImg.Height / 2) - 50), playBtnImg.Width, playBtnImg.Height);
                     exitBtnRec = new Rectangle(((screenWidth / 2) - (exitBtnImg.Width / 2)), ((screenHeight / 2) - (exitBtnImg.Height / 2) + 50), exitBtnImg.Width, exitBtnImg.Height);
                     
+                    //Center text
                     warningLoc = new Vector2((screenHeight / 2) - (font.MeasureString("WARNING:\nflashing colours may cause seizure").X / 2), 0);
+                    
                     
                     break;
 
@@ -374,6 +367,10 @@ namespace PASS3
                     
                     //Check for ball death
                     CheckBallDeath();
+                    
+                    //Check for game over
+                    if(lives <= 0)
+                        gamestate = END;
 
                     break;
 
@@ -386,7 +383,22 @@ namespace PASS3
                     break;
 
                 case END:
-
+                    
+                    //Center text 
+                    DeathMsgLoc = new Vector2((screenHeight / 2) - (font.MeasureString("GAME OVER").X / 2), (screenHeight / 4));
+                    DeathPointsLoc[0] = new Vector2((screenHeight / 2) - (font.MeasureString("You got " + hits + " ball!").X / 2), (screenHeight / 2));
+                    DeathPointsLoc[1] = new Vector2((screenHeight / 2) - (font.MeasureString("You got " + hits + " balls!").X / 2), (screenHeight / 2));
+                    RestartMsgLoc = new Vector2((screenHeight / 2) - (font.MeasureString("Press R to restart or C to close").X / 2), (screenHeight / 4) * 3);
+                    
+                    //Check for restart
+                    if (kb.IsKeyDown(Keys.R) && kb != prevKb && !prevKb.IsKeyDown(Keys.R))
+                    {
+                        Setup();
+                        gamestate = GAME;
+                    }
+                        
+                    if (kb.IsKeyDown(Keys.C) && kb != prevKb && !prevKb.IsKeyDown(Keys.C))
+                        Exit();
                     break;
 
             }
@@ -445,6 +457,7 @@ namespace PASS3
                     //TEST
                     Console.WriteLine("Hits: " + hits);
                     Console.WriteLine("Misses: : " + miss);
+                    Console.WriteLine("Lives: : " + lives);
                     
                     //spriteBatch.DrawString((font * scale), "test", textLoc, Color.White);
                     
@@ -457,7 +470,13 @@ namespace PASS3
                     break;
 
                 case END:
-
+                    GraphicsDevice.Clear(Color.Black);
+                    spriteBatch.DrawString(font, "GAME OVER", DeathMsgLoc, Color.Red);
+                    if(hits == 1)
+                        spriteBatch.DrawString(font, "You got " + hits + " ball!", DeathPointsLoc[0], Color.White);
+                    else
+                        spriteBatch.DrawString(font, "You got " + hits + " balls!", DeathPointsLoc[1], Color.White);
+                    spriteBatch.DrawString(font, "Press R to restart or C to close", RestartMsgLoc, Color.Red);
                     break;
             }
             spriteBatch.End();
@@ -528,6 +547,7 @@ namespace PASS3
                     for (int ii = 0; ii < NUMBALLS; ii++)
                         randomBallColour[ii] = rng.Next(0,randomColour.Length);
                     miss ++;
+                    lives --;
                 }
 
                 //Check for a hit and reset both the bullet and the ball
@@ -561,6 +581,34 @@ namespace PASS3
                 {
                     isShooting[i] = false;
                 }
+            }
+        }
+
+        void Setup()
+        {
+            //Reset stats
+            hits = 0;
+            miss = 0;
+            lives = LIVES;
+            
+            //set up balls and bullets
+            for (int i = 0; i < NUMBALLS; i++)
+            {
+                //Regenerate random spawn
+                path[i] = rng.Next(0,4);
+                //Set ball rec to new random spawn
+                ballRec[i] = possibleSpawns[path[i]];
+                //Regenerate random colour
+                randomColourNum = rng.Next(0,randomColour.Length);
+                //Regenerate random speed
+                speed[i] = (rng.Next(10, 31) / 10);
+                //Regenerate a random colour for each ball
+                for (int ii = 0; ii < NUMBALLS; ii++)
+                    randomBallColour[ii] = rng.Next(0,randomColour.Length);
+            }
+            for (int i = 0; i < NUMBULLETS; i++)
+            {
+                isShooting[i] = false;
             }
         }
 
