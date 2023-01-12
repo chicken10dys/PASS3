@@ -4,9 +4,11 @@
     <projectFile>PASS3/PASS3.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="46d2bcc8-f4f0-42e7-83ee-28561d9102d5" name="Changes" comment="Now with health, a death screen, and the ability to restart the game!">
+    <list default="true" id="46d2bcc8-f4f0-42e7-83ee-28561d9102d5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PASS3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PASS3/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PASS3/Game1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Game1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Icon.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Icon.bmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Icon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Icon.ico" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/PASS3.exe" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/bin/Debug/PASS3.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/PASS3.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/bin/Debug/PASS3.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PASS3/obj/Debug/PASS3.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/obj/Debug/PASS3.csprojAssemblyReference.cache" afterDir="false" />
@@ -22,8 +24,6 @@
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///run/media/chicken10dys/Ventoy/PASS3/PASS3/Game1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///run/media/chicken10dys/Ventoy/PASS3/PASS3/Game1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PASS3/obj/Release/.NETFramework,Version=v4.6.1.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -131,7 +131,10 @@
       <workItem from="1673462702201" duration="3898000" />
       <workItem from="1673498490263" duration="979000" />
       <workItem from="1673538375656" duration="920000" />
-      <workItem from="1673539540786" duration="2830000" />
+      <workItem from="1673539540786" duration="4017000" />
+      <workItem from="1673543576940" duration="117000" />
+      <workItem from="1673543758376" duration="39000" />
+      <workItem from="1673549272032" duration="3874000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1671545012218</created>
@@ -203,7 +206,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673541214305</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Added a pause screen and fixed some positioning issues in the death screen">
+      <created>1673542468497</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1673542468497</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,7 +242,8 @@
     <MESSAGE value="Added shooting!" />
     <MESSAGE value="added some stats in the terminal output and fixed some issues with speed scaling" />
     <MESSAGE value="Now with health, a death screen, and the ability to restart the game!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Now with health, a death screen, and the ability to restart the game!" />
+    <MESSAGE value="Added a pause screen and fixed some positioning issues in the death screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added a pause screen and fixed some positioning issues in the death screen" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

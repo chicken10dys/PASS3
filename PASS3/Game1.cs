@@ -27,7 +27,8 @@ namespace PASS3
         static Random rng = new Random();
 
         //Store max number of balls
-        const int NUMBALLS = 3;
+        const int MAXNUMBALLS = 10;
+        int NUMBALLS = 1;
         //Store max number of bullets
         const int NUMBULLETS = 2;
         //Store origional lives
@@ -36,7 +37,7 @@ namespace PASS3
         //General storage
         //Store colours
         Color[] randomColour = new Color[9] {Color.Red, Color.Orange, Color.Yellow, Color.Green, Color.Blue, Color.Indigo, Color.Violet, Color.Magenta, Color.Aqua};
-        int[] randomBallColour = new int[NUMBALLS];
+        int[] randomBallColour = new int[MAXNUMBALLS];
         //Store random colour
         int randomColourNum;
         //Store if coloured balls is on or off
@@ -47,7 +48,7 @@ namespace PASS3
         int screenHeight;
 
         //Store the scale
-        double scale;
+        float scale;
 
         //Store keyboard state
         KeyboardState kb;
@@ -92,7 +93,7 @@ namespace PASS3
         //Balls and paths
         Rectangle horizontalRowRec;
         Rectangle verticalRowRec;
-        Rectangle[] ballRec = new Rectangle[NUMBALLS];
+        Rectangle[] ballRec = new Rectangle[MAXNUMBALLS];
         
         //Shooting related
         Rectangle[] bulletRec = new Rectangle[NUMBULLETS];
@@ -107,8 +108,8 @@ namespace PASS3
         Vector2[] pauseMsgLoc = new Vector2[2];
         
         //Movement stuff
-        Vector2[] ballPos = new Vector2[NUMBALLS];                 //Stores the ball’s true position
-        float[] speed = new float [NUMBALLS];              //Stores the speed/update movement rate
+        Vector2[] ballPos = new Vector2[MAXNUMBALLS];                 //Stores the ball’s true position
+        float[] speed = new float [MAXNUMBALLS];              //Stores the speed/update movement rate
         //int dirX = 1;       //Stores the x direction, which will be one of 1(right), -1(left) or 0(stopped)
         //int dirY = 0;      //Stores the y direction, which will be one of 1(down), -1(up) or 0(stopped)
         int[] dirX = new int[]  { 0, 0, 1, -1};       //Stores the x direction, which will be one of 1(right), -1(left) or 0(stopped)
@@ -120,7 +121,7 @@ namespace PASS3
         const int LEFTPATH = 2;
         const int RIGHTPATH = 3;
         Rectangle[] possibleSpawns = new Rectangle[4];
-        int[] path = new int [NUMBALLS];
+        int[] path = new int [MAXNUMBALLS];
         
         //Store the bullet spawns
         Rectangle[] bulletSpawns = new Rectangle[4];
@@ -323,8 +324,8 @@ namespace PASS3
                     {
                         ballPos[i].X = ballRec[i].X;
                         ballPos[i].Y = ballRec[i].Y;
-                        ballPos[i].X = (float)(ballPos[i].X + (dirX[path[i]] * (speed[i] * scale)));
-                        ballPos[i].Y = (float)(ballPos[i].Y + (dirY[path[i]] * (speed[i] * scale)));
+                        ballPos[i].X = ballPos[i].X + (dirX[path[i]] * (speed[i] * scale));
+                        ballPos[i].Y = ballPos[i].Y + (dirY[path[i]] * (speed[i] * scale));
                         ballRec[i].X = (int)ballPos[i].X;
                         ballRec[i].Y = (int)ballPos[i].Y;
                         
@@ -355,8 +356,8 @@ namespace PASS3
                     {
                         bulletPos[i].X = bulletRec[i].X;
                         bulletPos[i].Y = bulletRec[i].Y;
-                        bulletPos[i].X = (float)(bulletPos[i].X + ((dirX[bulletDir[i]] * -1) * (bulletSpeed * scale)));
-                        bulletPos[i].Y = (float)(bulletPos[i].Y + ((dirY[bulletDir[i]] * -1) * (bulletSpeed * scale)));
+                        bulletPos[i].X = bulletPos[i].X + ((dirX[bulletDir[i]] * -1) * (bulletSpeed * scale));
+                        bulletPos[i].Y = bulletPos[i].Y + ((dirY[bulletDir[i]] * -1) * (bulletSpeed * scale));
                         bulletRec[i].X = (int)bulletPos[i].X;
                         bulletRec[i].Y = (int)bulletPos[i].Y;
                     }
@@ -364,6 +365,15 @@ namespace PASS3
                     
                     if(kb.IsKeyDown(Keys.E) && kb != prevKb)
                         colouredBalls = !colouredBalls;
+
+                    if (hits >= 5 && NUMBALLS == 1)
+                        NewBall();
+                    if (hits >= 20 && NUMBALLS == 2)
+                        NewBall();
+                    if (hits >= 50 && NUMBALLS == 3)
+                        NewBall();
+                    if (hits >= 200 && NUMBALLS == 4)
+                        NewBall();
                     
                     
                     //Check for ball death
@@ -417,7 +427,6 @@ namespace PASS3
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-
             spriteBatch.Begin();
             switch (gamestate)
             {
@@ -490,11 +499,12 @@ namespace PASS3
             base.Draw(gameTime);
         }
 
+        //This subprogram will set the scale and scaled position of game assets 
         void CalcPos()
         {
             //Scale all the stuff based on the window size
             //Update scale
-            scale = (double)(screenHeight) / 500;
+            scale = screenHeight / 500f;
 
             playAreaRec = new Rectangle(((screenWidth - screenHeight) / 2), 0, screenHeight, screenHeight);
             horizontalRowRec = new Rectangle(((screenWidth - screenHeight) / 2), ((screenHeight / 2) - (screenHeight / 24)), screenHeight, (screenHeight / 12));
@@ -530,6 +540,7 @@ namespace PASS3
             }
         }
 
+        //This subprogram will check for ball death
         void CheckBallDeath()
         {
             
@@ -545,7 +556,7 @@ namespace PASS3
                     //Regenerate random colour
                     randomColourNum = rng.Next(0,randomColour.Length);
                     //Regenerate random speed
-                    speed[i] = (rng.Next(10, 31) / 10);
+                    speed[i] = rng.Next(10, 21) / 10f;
                     //Scale the speed
                     //speed[i] = (float)(speed[i] * scale);
                     //Regenerate a random colour for each ball
@@ -569,7 +580,7 @@ namespace PASS3
                         //Regenerate random colour
                         randomColourNum = rng.Next(0,randomColour.Length);
                         //Regenerate random speed
-                        speed[i] = (rng.Next(10, 31) / 10);
+                        speed[i] = rng.Next(10, 21) / 10f;
                         //Scale the speed
                         //speed[i] = (float)(speed[i] * scale);
                         //Regenerate a random colour for each ball
@@ -589,12 +600,14 @@ namespace PASS3
             }
         }
 
+        //This subprogram will set up and reset the game
         void Setup()
         {
             //Reset stats
             hits = 0;
             miss = 0;
             lives = LIVES;
+            NUMBALLS = 1;
             
             //set up balls and bullets
             for (int i = 0; i < NUMBALLS; i++)
@@ -606,7 +619,7 @@ namespace PASS3
                 //Regenerate random colour
                 randomColourNum = rng.Next(0,randomColour.Length);
                 //Regenerate random speed
-                speed[i] = (rng.Next(10, 31) / 10);
+                speed[i] = rng.Next(10, 21) / 10f;
                 //Regenerate a random colour for each ball
                 for (int ii = 0; ii < NUMBALLS; ii++)
                     randomBallColour[ii] = rng.Next(0,randomColour.Length);
@@ -615,6 +628,23 @@ namespace PASS3
             {
                 isShooting[i] = false;
             }
+        }
+
+        //This subprogram will add and set up new balls
+        void NewBall()
+        {
+            NUMBALLS ++;
+            //Generate random spawn
+            path[NUMBALLS -1] = rng.Next(0,4);
+            //Set ball rec to new random spawn
+            ballRec[NUMBALLS -1] = possibleSpawns[path[NUMBALLS -1]];
+            //Generate random colour
+            randomColourNum = rng.Next(0,randomColour.Length);
+            //Generate random speed
+            speed[NUMBALLS -1] = rng.Next(10, 21) / 10f;
+            //Generate a random colour for each ball
+            for (int ii = 0; ii < NUMBALLS; ii++)
+                randomBallColour[ii] = rng.Next(0,randomColour.Length);
         }
 
     }
