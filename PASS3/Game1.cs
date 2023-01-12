@@ -101,9 +101,10 @@ namespace PASS3
         
         //Vector2 for fonts
         Vector2 warningLoc;
-        Vector2 DeathMsgLoc;
-        Vector2[] DeathPointsLoc = new Vector2[2];
-        Vector2 RestartMsgLoc;
+        Vector2 deathMsgLoc;
+        Vector2[] deathPointsLoc = new Vector2[2];
+        Vector2 restartMsgLoc;
+        Vector2[] pauseMsgLoc = new Vector2[2];
         
         //Movement stuff
         Vector2[] ballPos = new Vector2[NUMBALLS];                 //Stores the ball’s true position
@@ -380,15 +381,17 @@ namespace PASS3
                     {
                         gamestate = GAME;
                     }
+                    pauseMsgLoc[0] = new Vector2((screenHeight / 2) - (font.MeasureString("Game paused").X / 2), (screenHeight / 2) - (font.MeasureString("Game paused").Y));
+                    pauseMsgLoc[1] = new Vector2((screenHeight / 2) - (font.MeasureString("Press escape to resume").X / 2), (screenHeight / 2));
                     break;
 
                 case END:
                     
                     //Center text 
-                    DeathMsgLoc = new Vector2((screenHeight / 2) - (font.MeasureString("GAME OVER").X / 2), (screenHeight / 4));
-                    DeathPointsLoc[0] = new Vector2((screenHeight / 2) - (font.MeasureString("You got " + hits + " ball!").X / 2), (screenHeight / 2));
-                    DeathPointsLoc[1] = new Vector2((screenHeight / 2) - (font.MeasureString("You got " + hits + " balls!").X / 2), (screenHeight / 2));
-                    RestartMsgLoc = new Vector2((screenHeight / 2) - (font.MeasureString("Press R to restart or C to close").X / 2), (screenHeight / 4) * 3);
+                    deathMsgLoc = new Vector2((screenHeight / 2) - (font.MeasureString("GAME OVER").X / 2), (screenHeight / 4)- (font.MeasureString("GAME OVER").Y / 2));
+                    deathPointsLoc[0] = new Vector2((screenHeight / 2) - (font.MeasureString("You got " + hits + " ball!").X / 2), (screenHeight / 2) - (font.MeasureString("You got " + hits + " ball!").Y / 2));
+                    deathPointsLoc[1] = new Vector2((screenHeight / 2) - (font.MeasureString("You got " + hits + " balls!").X / 2), (screenHeight / 2) - (font.MeasureString("You got " + hits + " balls!").Y / 2));
+                    restartMsgLoc = new Vector2((screenHeight / 2) - (font.MeasureString("Press R to restart or C to close").X / 2), (screenHeight / 4) * 3  - (font.MeasureString("Press R to restart or C to close").Y / 2));
                     
                     //Check for restart
                     if (kb.IsKeyDown(Keys.R) && kb != prevKb && !prevKb.IsKeyDown(Keys.R))
@@ -467,16 +470,18 @@ namespace PASS3
 
                 case PAUSE:
                     GraphicsDevice.Clear(Color.Black);
+                    spriteBatch.DrawString(font, "Game paused", pauseMsgLoc[0], Color.White);
+                    spriteBatch.DrawString(font, "Press escape to resume", pauseMsgLoc[1], Color.White);
                     break;
 
                 case END:
                     GraphicsDevice.Clear(Color.Black);
-                    spriteBatch.DrawString(font, "GAME OVER", DeathMsgLoc, Color.Red);
+                    spriteBatch.DrawString(font, "GAME OVER", deathMsgLoc, Color.Red);
                     if(hits == 1)
-                        spriteBatch.DrawString(font, "You got " + hits + " ball!", DeathPointsLoc[0], Color.White);
+                        spriteBatch.DrawString(font, "You got " + hits + " ball!", deathPointsLoc[0], Color.White);
                     else
-                        spriteBatch.DrawString(font, "You got " + hits + " balls!", DeathPointsLoc[1], Color.White);
-                    spriteBatch.DrawString(font, "Press R to restart or C to close", RestartMsgLoc, Color.Red);
+                        spriteBatch.DrawString(font, "You got " + hits + " balls!", deathPointsLoc[1], Color.White);
+                    spriteBatch.DrawString(font, "Press R to restart or C to close", restartMsgLoc, Color.Red);
                     break;
             }
             spriteBatch.End();
