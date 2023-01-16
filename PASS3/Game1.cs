@@ -10,7 +10,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
-
 //using Microsoft.Xna.Framework.Content.Pipeline.Serialization.Compiler;
 
 namespace PASS3
@@ -32,7 +31,7 @@ namespace PASS3
         //Store max number of bullets
         const int NUMBULLETS = 2;
         //Store origional lives
-        const int LIVES = 10;
+        const int LIVES = 5;
         
         //General storage
         //Store colours
@@ -49,6 +48,9 @@ namespace PASS3
 
         //Store the scale
         float scale;
+        
+        //Store the final screen size
+        int finalScreenSize;
 
         //Store keyboard state
         KeyboardState kb;
@@ -81,6 +83,11 @@ namespace PASS3
         //Store arrow sprites
         Texture2D[] arrow = new Texture2D [4];
 
+        //Easter egg
+        Texture2D easterEggImg;
+        
+        Animation easterEggAnim;
+        
         //Fonts
         SpriteFont font;
 
@@ -100,12 +107,16 @@ namespace PASS3
         Rectangle arrowRec;
         Rectangle centerRec;
         
+        //Easter egg
+        Vector2 easterEggPos;
+        
         //Vector2 for fonts
         Vector2 warningLoc;
         Vector2 deathMsgLoc;
         Vector2[] deathPointsLoc = new Vector2[2];
         Vector2 restartMsgLoc;
         Vector2[] pauseMsgLoc = new Vector2[2];
+        Vector2 easterEggMsgLoc;
         
         //Movement stuff
         Vector2[] ballPos = new Vector2[MAXNUMBALLS];                 //Stores the ball’s true position
@@ -182,6 +193,7 @@ namespace PASS3
             arrow[DOWN] = Content.Load<Texture2D>("Sprites/DownArrow");
             arrow[LEFT] = Content.Load<Texture2D>("Sprites/LeftArrow");
             arrow[RIGHT] = Content.Load<Texture2D>("Sprites/RightArrow");
+            easterEggImg = Content.Load<Texture2D>("Sprites/69");
             
             //Load fonts
             font = Content.Load<SpriteFont>("Fonts/Font");
@@ -191,6 +203,9 @@ namespace PASS3
             playAreaRec = new Rectangle(((screenWidth - screenHeight) / 2), 0, screenHeight, screenHeight);
             horizontalRowRec = new Rectangle(((screenWidth - screenHeight) / 2), ((screenHeight / 2) - (screenHeight / 16)), screenHeight, (screenHeight / 8));
             verticalRowRec = new Rectangle(((screenWidth / 2) - (screenHeight / 16)), 0, (screenHeight / 8), screenHeight);
+            
+            //Set up easter egg animation position
+            easterEggPos = new Vector2(-10,0);
 
             Setup();
             base.Initialize();
@@ -235,6 +250,9 @@ namespace PASS3
             //Update window size
             screenWidth = graphics.GraphicsDevice.Viewport.Width;
             screenHeight = graphics.GraphicsDevice.Viewport.Height;
+            
+            //Update animations
+            
             
             //Update stuff based on gamestate
             switch (gamestate)
@@ -291,8 +309,6 @@ namespace PASS3
                         randomColourNum = rng.Next(0, randomColour.Length);
                         
                     }
-
-                        
                     
                     this.graphics.PreferredBackBufferWidth = Math.Min(screenHeight, screenWidth);
                     this.graphics.PreferredBackBufferHeight = Math.Min(screenHeight, screenWidth);
@@ -382,7 +398,7 @@ namespace PASS3
                     //Check for game over
                     if(lives <= 0)
                         gamestate = END;
-
+                    
                     break;
 
                 case PAUSE:
@@ -396,17 +412,26 @@ namespace PASS3
                     break;
 
                 case END:
+                    //Set screensize
+                    this.graphics.PreferredBackBufferWidth = 500;
+                    this.graphics.PreferredBackBufferHeight = 500;
+                    this.graphics.ApplyChanges();
                     
+                    //Update animations
+                    easterEggAnim.Update(gameTime);
                     //Center text 
                     deathMsgLoc = new Vector2((screenHeight / 2) - (font.MeasureString("GAME OVER").X / 2), (screenHeight / 4)- (font.MeasureString("GAME OVER").Y / 2));
                     deathPointsLoc[0] = new Vector2((screenHeight / 2) - (font.MeasureString("You got " + hits + " ball!").X / 2), (screenHeight / 2) - (font.MeasureString("You got " + hits + " ball!").Y / 2));
                     deathPointsLoc[1] = new Vector2((screenHeight / 2) - (font.MeasureString("You got " + hits + " balls!").X / 2), (screenHeight / 2) - (font.MeasureString("You got " + hits + " balls!").Y / 2));
                     restartMsgLoc = new Vector2((screenHeight / 2) - (font.MeasureString("Press R to restart or C to close").X / 2), (screenHeight / 4) * 3  - (font.MeasureString("Press R to restart or C to close").Y / 2));
-                    
+                    easterEggMsgLoc = new Vector2((screenHeight / 2) - (font.MeasureString("HAHA YOU GOT FUNNY NUMBER").X / 2), screenHeight  - font.MeasureString("HAHA YOU GOT FUNNY NUMBER").Y);
                     //Check for restart
                     if (kb.IsKeyDown(Keys.R) && kb != prevKb && !prevKb.IsKeyDown(Keys.R))
                     {
                         Setup();
+                        this.graphics.PreferredBackBufferWidth = finalScreenSize;
+                        this.graphics.PreferredBackBufferHeight = finalScreenSize;
+                        this.graphics.ApplyChanges();
                         gamestate = GAME;
                     }
                         
@@ -471,11 +496,7 @@ namespace PASS3
                     Console.WriteLine("Hits: " + hits);
                     Console.WriteLine("Misses: : " + miss);
                     Console.WriteLine("Lives: : " + lives);
-                    
-                    //spriteBatch.DrawString((font * scale), "test", textLoc, Color.White);
-                    
-                    //Draw center hitbox
-                    
+
                     break;
 
                 case PAUSE:
@@ -486,12 +507,18 @@ namespace PASS3
 
                 case END:
                     GraphicsDevice.Clear(Color.Black);
+                    if (hits == 69)
+                    {
+                        easterEggAnim.Draw(spriteBatch, Color.White, Animation.FLIP_NONE);
+                        spriteBatch.DrawString(font, "HAHA YOU GOT FUNNY NUMBER", easterEggMsgLoc, Color.White);
+                    }
                     spriteBatch.DrawString(font, "GAME OVER", deathMsgLoc, Color.Red);
                     if(hits == 1)
                         spriteBatch.DrawString(font, "You got " + hits + " ball!", deathPointsLoc[0], Color.White);
                     else
                         spriteBatch.DrawString(font, "You got " + hits + " balls!", deathPointsLoc[1], Color.White);
                     spriteBatch.DrawString(font, "Press R to restart or C to close", restartMsgLoc, Color.Red);
+                    
                     break;
             }
             spriteBatch.End();
@@ -526,16 +553,16 @@ namespace PASS3
             bulletSpawns[2] = new Rectangle(Convert.ToInt32((screenHeight / 2) - (screenHeight / 24) - (8 * scale)),Convert.ToInt32((screenHeight / 2) - (int)(4 * scale)),(int)(8 * scale),(int)(8 * scale));
             bulletSpawns[3] = new Rectangle(Convert.ToInt32((screenHeight / 2) + (screenHeight / 24) ),Convert.ToInt32((screenHeight / 2) - (4 * scale)),(int)(8 * scale),(int)(8 * scale));
             
-
+            
+            easterEggAnim = new Animation(easterEggImg, 5, 9, 44, 0, Animation.NO_IDLE, Animation.ANIMATE_FOREVER, 5, easterEggPos, 1.4f, true);
+            
+            finalScreenSize = screenHeight;
+            
             for (int i = 0; i < NUMBALLS; i++)
             {
                 //Generate a spawn for each ball
                 ballRec[i] = possibleSpawns[path[i]];
-                
-                //Scale the speed
-                //speed[i] = (float)(speed[i] * scale);
-                //bulletSpeed = (float)(bulletSpeed * scale);
-                
+
                 //Generate a random colour for each ball
                 randomBallColour[i] = rng.Next(0,randomColour.Length);
             }
@@ -558,8 +585,6 @@ namespace PASS3
                     randomColourNum = rng.Next(0,randomColour.Length);
                     //Regenerate random speed
                     speed[i] = rng.Next(10, 21) / 10f;
-                    //Scale the speed
-                    //speed[i] = (float)(speed[i] * scale);
                     //Regenerate a random colour for each ball
                     for (int ii = 0; ii < NUMBALLS; ii++)
                         randomBallColour[ii] = rng.Next(0,randomColour.Length);
@@ -582,8 +607,6 @@ namespace PASS3
                         randomColourNum = rng.Next(0,randomColour.Length);
                         //Regenerate random speed
                         speed[i] = rng.Next(10, 21) / 10f;
-                        //Scale the speed
-                        //speed[i] = (float)(speed[i] * scale);
                         //Regenerate a random colour for each ball
                         for (int iii = 0; iii < NUMBALLS; iii++)
                             randomBallColour[iii] = rng.Next(0,randomColour.Length);

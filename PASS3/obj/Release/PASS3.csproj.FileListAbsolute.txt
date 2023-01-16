@@ -1,0 +1,11 @@
+/run/media/chicken10dys/Ventoy/PASS3/PASS3/bin/Release/PASS3.exe.config
+/run/media/chicken10dys/Ventoy/PASS3/PASS3/bin/Release/PASS3.exe
+/run/media/chicken10dys/Ventoy/PASS3/PASS3/bin/Release/PASS3.pdb
+/run/media/chicken10dys/Ventoy/PASS3/PASS3/bin/Release/Animation2D.dll
+/run/media/chicken10dys/Ventoy/PASS3/PASS3/bin/Release/MonoGame.Framework.dll
+/run/media/chicken10dys/Ventoy/PASS3/PASS3/bin/Release/MonoGame.Framework.xml
+/run/media/chicken10dys/Ventoy/PASS3/PASS3/obj/Release/PASS3.csprojAssemblyReference.cache
+/run/media/chicken10dys/Ventoy/PASS3/PASS3/obj/Release/PASS3.csproj.CoreCompileInputs.cache
+/run/media/chicken10dys/Ventoy/PASS3/PASS3/obj/Release/PASS3.csproj.CopyComplete
+/run/media/chicken10dys/Ventoy/PASS3/PASS3/obj/Release/PASS3.exe
+/run/media/chicken10dys/Ventoy/PASS3/PASS3/obj/Release/PASS3.pdb

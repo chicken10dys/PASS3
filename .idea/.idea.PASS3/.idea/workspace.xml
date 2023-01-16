@@ -6,8 +6,38 @@
   <component name="ChangeListManager">
     <list default="true" id="46d2bcc8-f4f0-42e7-83ee-28561d9102d5" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PASS3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PASS3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Icon.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Icon.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Icon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Icon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/Content.mgcb" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/Content.mgcb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/Sprites/BlueBucket.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/Sprites/GreenBucket.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/Sprites/RedBucket.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/.mgstats" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/.mgstats" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Fonts/Font.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Fonts/Font.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Fonts/FontXL.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Fonts/FontXL.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Fonts/mediumFont.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Fonts/mediumFont.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/Blank.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/Blank.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/DownArrow.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/DownArrow.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/ExitBtn1.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/ExitBtn1.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/LeftArrow.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/LeftArrow.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/NoWind.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/NoWind.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/PlayBtn1.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/PlayBtn1.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/PowerMeter.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/PowerMeter.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/RightArrow.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/RightArrow.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/UpArrow.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/UpArrow.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/WindArrowLeft.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/WindArrowLeft.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/WindArrowRight.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/WindArrowRight.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/ball.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/ball.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Game1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Game1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/PASS3.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/PASS3.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Sprites/BlueBucket.xnb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Sprites/GreenBucket.xnb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Sprites/RedBucket.xnb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/PASS3.exe" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/bin/Debug/PASS3.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/PASS3.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/bin/Debug/PASS3.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/obj/Debug/PASS3.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/obj/Debug/PASS3.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/obj/Debug/PASS3.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/obj/Debug/PASS3.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/obj/Debug/PASS3.exe" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/obj/Debug/PASS3.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/obj/Debug/PASS3.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/obj/Debug/PASS3.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,12 +49,16 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1b3500140e1c4909bb864bc920f14b3b16c400/d4/bc57e551/Game.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PASS3/Game1.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/PASS3/obj/Release/.NETFramework,Version=v4.6.1.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2IsAKVBERPElFwEvQa5ko9Hmnux" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -36,9 +70,9 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/run/media/chicken10dys/Ventoy/PASS3&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/run/media/chicken10dys/Ventoy/PASS3/PASS3/Content/Sprites/69.png&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.tabs&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -132,6 +166,15 @@
       <workItem from="1673549272032" duration="4323000" />
       <workItem from="1673631879079" duration="164000" />
       <workItem from="1673635479433" duration="352000" />
+      <workItem from="1673636579985" duration="136000" />
+      <workItem from="1673637818108" duration="1642000" />
+      <workItem from="1673641654331" duration="199000" />
+      <workItem from="1673656909984" duration="124000" />
+      <workItem from="1673664513864" duration="999000" />
+      <workItem from="1673667238818" duration="264000" />
+      <workItem from="1673754634956" duration="1683000" />
+      <workItem from="1673830496602" duration="4468000" />
+      <workItem from="1673841971045" duration="593000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1671545012218</created>
@@ -224,7 +267,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673553581696</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Attempt to change icon">
+      <created>1673636597127</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1673636597127</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,7 +305,8 @@
     <MESSAGE value="Now with health, a death screen, and the ability to restart the game!" />
     <MESSAGE value="Added a pause screen and fixed some positioning issues in the death screen" />
     <MESSAGE value="Same thing but it now gets progressively more difficult" />
-    <option name="LAST_COMMIT_MESSAGE" value="Same thing but it now gets progressively more difficult" />
+    <MESSAGE value="Attempt to change icon" />
+    <option name="LAST_COMMIT_MESSAGE" value="Attempt to change icon" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

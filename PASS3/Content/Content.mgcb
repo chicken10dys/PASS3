@@ -34,6 +34,18 @@
 /processorParam:TextureFormat=Compressed
 /build:Fonts/mediumFont.spritefont
 
+#begin Sprites/69.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Sprites/69.png
+
 #begin Sprites/ball.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -58,18 +70,6 @@
 /processorParam:TextureFormat=Color
 /build:Sprites/Blank.png
 
-#begin Sprites/BlueBucket.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Sprites/BlueBucket.png
-
 #begin Sprites/DownArrow.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -93,18 +93,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Sprites/ExitBtn1.png
-
-#begin Sprites/GreenBucket.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Sprites/GreenBucket.png
 
 #begin Sprites/LeftArrow.png
 /importer:TextureImporter
@@ -153,18 +141,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Sprites/PowerMeter.png
-
-#begin Sprites/RedBucket.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Sprites/RedBucket.png
 
 #begin Sprites/RightArrow.png
 /importer:TextureImporter
