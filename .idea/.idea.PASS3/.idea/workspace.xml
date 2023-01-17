@@ -4,31 +4,11 @@
     <projectFile>PASS3/PASS3.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="46d2bcc8-f4f0-42e7-83ee-28561d9102d5" name="Changes" comment="">
+    <list default="true" id="46d2bcc8-f4f0-42e7-83ee-28561d9102d5" name="Changes" comment="Added the instructions screen">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PASS3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PASS3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/Content.mgcb" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/Content.mgcb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/.mgstats" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/.mgstats" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Fonts/Font.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Fonts/Font.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Fonts/FontXL.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Fonts/FontXL.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Fonts/mediumFont.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Fonts/mediumFont.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/69.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/69.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/Blank.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/Blank.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/DownArrow.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/DownArrow.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/ExitBtn1.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/ExitBtn1.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/LeftArrow.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/LeftArrow.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/NoWind.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/NoWind.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/PlayBtn1.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/PlayBtn1.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/PowerMeter.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/PowerMeter.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/RightArrow.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/RightArrow.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/UpArrow.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/UpArrow.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/WindArrowLeft.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/WindArrowLeft.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/WindArrowRight.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/WindArrowRight.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/ball.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/ball.mgcontent" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PASS3/Game1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Game1.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/PASS3.exe" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/bin/Debug/PASS3.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/PASS3.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/bin/Debug/PASS3.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/obj/Debug/PASS3.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/obj/Debug/PASS3.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PASS3/obj/Debug/PASS3.exe" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/obj/Debug/PASS3.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PASS3/obj/Debug/PASS3.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/obj/Debug/PASS3.pdb" afterDir="false" />
     </list>
@@ -168,7 +148,7 @@
       <workItem from="1673841971045" duration="1400000" />
       <workItem from="1673894681350" duration="2001000" />
       <workItem from="1673897175382" duration="1542000" />
-      <workItem from="1673981463081" duration="814000" />
+      <workItem from="1673981463081" duration="1494000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1671545012218</created>
@@ -275,7 +255,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673842746671</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Added the instructions screen">
+      <created>1673982482937</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1673982482937</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -308,7 +295,8 @@
     <MESSAGE value="Same thing but it now gets progressively more difficult" />
     <MESSAGE value="Attempt to change icon" />
     <MESSAGE value="added special screen when dying on ball 69" />
-    <option name="LAST_COMMIT_MESSAGE" value="added special screen when dying on ball 69" />
+    <MESSAGE value="Added the instructions screen" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added the instructions screen" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

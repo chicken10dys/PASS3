@@ -267,19 +267,19 @@ namespace PASS3
             {
                 case MENU:
                     //Switch gamestates
-                    if (playBtnRec.Contains(mouse.Position) && mouse.LeftButton == ButtonState.Pressed)
+                    if (playBtnRec.Contains(mouse.Position) && mouse.LeftButton == ButtonState.Pressed || kb.IsKeyDown(Keys.P) && kb != prevKb && !prevKb.IsKeyDown(Keys.P))
                     {
                         //Generate random colour
                         randomColourNum = rng.Next(0, randomColour.Length);
                         CalcPos();
                         gamestate = GAME;
                     }
-                    if (exitBtnRec.Contains(mouse.Position) && mouse.LeftButton == ButtonState.Pressed)
+                    if (exitBtnRec.Contains(mouse.Position) && mouse.LeftButton == ButtonState.Pressed || kb.IsKeyDown(Keys.Escape) && kb != prevKb && !prevKb.IsKeyDown(Keys.Escape))
                         Exit();
-                    if (instructionsBtnRec.Contains(mouse.Position) && mouse.LeftButton == ButtonState.Pressed)
+                    if (instructionsBtnRec.Contains(mouse.Position) && mouse.LeftButton == ButtonState.Pressed || kb.IsKeyDown(Keys.I) && kb != prevKb && !prevKb.IsKeyDown(Keys.I))
                         gamestate = INSTRUCTIONS;
                     //Change colour on right click
-                    if (mouse.RightButton == ButtonState.Pressed && mouse != prevMouse)
+                    if (mouse.RightButton == ButtonState.Pressed && mouse != prevMouse || kb.IsKeyDown(Keys.C) && kb != prevKb && !prevKb.IsKeyDown(Keys.C))
                         randomColourNum = rng.Next(0, randomColour.Length);
 
                     //Logic to change window size
@@ -455,7 +455,7 @@ namespace PASS3
                     scale = screenHeight / 500f;
                     instructionsRec = new Rectangle (0, 0, screenHeight, screenHeight);
                     exitToMenuBtnRec =  new Rectangle((int)(screenHeight - (exitBtnImg.Width * scale)), (int)(screenHeight - (exitBtnImg.Height * scale)), (int)(exitBtnImg.Width * scale), (int)(exitBtnImg.Height * scale));
-                    if (exitToMenuBtnRec.Contains(mouse.Position) && mouse.LeftButton == ButtonState.Pressed)
+                    if (exitToMenuBtnRec.Contains(mouse.Position) && mouse.LeftButton == ButtonState.Pressed || kb.IsKeyDown(Keys.Escape) && kb != prevKb && !prevKb.IsKeyDown(Keys.Escape))
                         gamestate = MENU;
                     break;
                 
