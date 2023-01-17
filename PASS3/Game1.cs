@@ -65,6 +65,7 @@ namespace PASS3
         const int GAME = 1;
         const int PAUSE = 2;
         const int END = 3;
+        const int INSTRUCTIONS = 4;
         int gamestate = 0;
         
         //Store arrow directions
@@ -78,6 +79,8 @@ namespace PASS3
         Texture2D blank;
         Texture2D playBtnImg;
         Texture2D exitBtnImg;
+        Texture2D instructionsBtnImg;
+        Texture2D instructionsImg;
         Texture2D ballImg;
         
         //Store arrow sprites
@@ -94,6 +97,9 @@ namespace PASS3
         //UI
         Rectangle playBtnRec;
         Rectangle exitBtnRec;
+        Rectangle instructionsBtnRec;
+        Rectangle instructionsRec;
+        Rectangle exitToMenuBtnRec;
         Rectangle playAreaRec;
 
         //Game stuff
@@ -188,6 +194,8 @@ namespace PASS3
             blank = Content.Load<Texture2D>("Sprites/Blank");
             playBtnImg = Content.Load<Texture2D>("Sprites/PlayBtn1");
             exitBtnImg = Content.Load<Texture2D>("Sprites/ExitBtn1");
+            instructionsBtnImg = Content.Load<Texture2D>("Sprites/InstructionsBtn1");
+            instructionsImg = Content.Load<Texture2D>("Sprites/Instructions");
             ballImg = Content.Load<Texture2D>("Sprites/ball");
             arrow[UP] = Content.Load<Texture2D>("Sprites/UpArrow");
             arrow[DOWN] = Content.Load<Texture2D>("Sprites/DownArrow");
@@ -258,7 +266,7 @@ namespace PASS3
             switch (gamestate)
             {
                 case MENU:
-
+                    //Switch gamestates
                     if (playBtnRec.Contains(mouse.Position) && mouse.LeftButton == ButtonState.Pressed)
                     {
                         //Generate random colour
@@ -268,7 +276,8 @@ namespace PASS3
                     }
                     if (exitBtnRec.Contains(mouse.Position) && mouse.LeftButton == ButtonState.Pressed)
                         Exit();
-
+                    if (instructionsBtnRec.Contains(mouse.Position) && mouse.LeftButton == ButtonState.Pressed)
+                        gamestate = INSTRUCTIONS;
                     //Change colour on right click
                     if (mouse.RightButton == ButtonState.Pressed && mouse != prevMouse)
                         randomColourNum = rng.Next(0, randomColour.Length);
@@ -288,9 +297,10 @@ namespace PASS3
                     }
                     
                     //Update locations
-                    playBtnRec = new Rectangle(((screenWidth / 2) - (playBtnImg.Width / 2)), ((screenHeight / 2) - (playBtnImg.Height / 2) - 50), playBtnImg.Width, playBtnImg.Height);
-                    exitBtnRec = new Rectangle(((screenWidth / 2) - (exitBtnImg.Width / 2)), ((screenHeight / 2) - (exitBtnImg.Height / 2) + 50), exitBtnImg.Width, exitBtnImg.Height);
-                    
+                    playBtnRec = new Rectangle(((screenWidth / 2) - (playBtnImg.Width / 2)), ((screenHeight / 2) - (playBtnImg.Height / 2) - (exitBtnImg.Height + 25)), playBtnImg.Width, playBtnImg.Height);
+                    exitBtnRec = new Rectangle(((screenWidth / 2) - (exitBtnImg.Width / 2)), ((screenHeight / 2) - (exitBtnImg.Height / 2)), exitBtnImg.Width, exitBtnImg.Height);
+                    instructionsBtnRec = new Rectangle(((screenWidth / 2) - (instructionsBtnImg.Width / 2)), ((screenHeight / 2) - (instructionsBtnImg.Height / 2) + (exitBtnImg.Height + 25)), instructionsBtnImg.Width, instructionsBtnImg.Height);
+
                     //Center text
                     warningLoc = new Vector2((screenHeight / 2) - (font.MeasureString("WARNING:\nflashing colours may cause seizure").X / 2), 0);
                     
@@ -397,6 +407,7 @@ namespace PASS3
                     
                     //Check for game over
                     if(lives <= 0)
+                    //if(hits == 69)
                         gamestate = END;
                     
                     break;
@@ -438,6 +449,16 @@ namespace PASS3
                     if (kb.IsKeyDown(Keys.C) && kb != prevKb && !prevKb.IsKeyDown(Keys.C))
                         Exit();
                     break;
+                
+                case INSTRUCTIONS:
+                    //Update scale
+                    scale = screenHeight / 500f;
+                    instructionsRec = new Rectangle (0, 0, screenHeight, screenHeight);
+                    exitToMenuBtnRec =  new Rectangle((int)(screenHeight - (exitBtnImg.Width * scale)), (int)(screenHeight - (exitBtnImg.Height * scale)), (int)(exitBtnImg.Width * scale), (int)(exitBtnImg.Height * scale));
+                    if (exitToMenuBtnRec.Contains(mouse.Position) && mouse.LeftButton == ButtonState.Pressed)
+                        gamestate = MENU;
+                    break;
+                
 
             }
 
@@ -460,6 +481,7 @@ namespace PASS3
                     GraphicsDevice.Clear(randomColour[randomColourNum]);
                     spriteBatch.Draw(playBtnImg, playBtnRec, Color.White);
                     spriteBatch.Draw(exitBtnImg, exitBtnRec, Color.White);
+                    spriteBatch.Draw(instructionsBtnImg, instructionsBtnRec, Color.White);
                     if(randomColourNum != 0)
                         spriteBatch.DrawString(font, "WARNING:\nflashing colours may cause seizure", warningLoc, Color.Red);
                     if(randomColourNum == 0)
@@ -510,7 +532,7 @@ namespace PASS3
                     if (hits == 69)
                     {
                         easterEggAnim.Draw(spriteBatch, Color.White, Animation.FLIP_NONE);
-                        spriteBatch.DrawString(font, "HAHA YOU GOT FUNNY NUMBER", easterEggMsgLoc, Color.White);
+                        spriteBatch.DrawString(font, "HAHA YOU GOT FUNNY NUMBER", easterEggMsgLoc, Color.Black);
                     }
                     spriteBatch.DrawString(font, "GAME OVER", deathMsgLoc, Color.Red);
                     if(hits == 1)
@@ -519,6 +541,12 @@ namespace PASS3
                         spriteBatch.DrawString(font, "You got " + hits + " balls!", deathPointsLoc[1], Color.White);
                     spriteBatch.DrawString(font, "Press R to restart or C to close", restartMsgLoc, Color.Red);
                     
+                    break;
+                
+                case INSTRUCTIONS:
+                    GraphicsDevice.Clear(Color.Beige);
+                    spriteBatch.Draw(instructionsImg, instructionsRec, Color.White);
+                    spriteBatch.Draw(exitBtnImg, exitToMenuBtnRec, Color.White);
                     break;
             }
             spriteBatch.End();
