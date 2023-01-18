@@ -12,6 +12,7 @@
     <File>D:/PASS3/PASS3/Content/Sprites/Blank.png</File>
     <File>D:/PASS3/PASS3/Content/Sprites/DownArrow.png</File>
     <File>D:/PASS3/PASS3/Content/Sprites/ExitBtn1.png</File>
+    <File>D:/PASS3/PASS3/Content/Sprites/Heart.png</File>
     <File>D:/PASS3/PASS3/Content/Sprites/Instructions.png</File>
     <File>D:/PASS3/PASS3/Content/Sprites/InstructionsBtn1.png</File>
     <File>D:/PASS3/PASS3/Content/Sprites/LeftArrow.png</File>
@@ -24,6 +25,7 @@
     <File>D:/PASS3/PASS3/Content/Sprites/WindArrowRight.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />
     <File xsi:nil="true" />

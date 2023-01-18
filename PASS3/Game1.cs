@@ -82,6 +82,7 @@ namespace PASS3
         Texture2D instructionsBtnImg;
         Texture2D instructionsImg;
         Texture2D ballImg;
+        Texture2D healthImg;
         
         //Store arrow sprites
         Texture2D[] arrow = new Texture2D [4];
@@ -101,6 +102,7 @@ namespace PASS3
         Rectangle instructionsRec;
         Rectangle exitToMenuBtnRec;
         Rectangle playAreaRec;
+        Rectangle[] healthDisplayRec = new Rectangle[LIVES];
 
         //Game stuff
         //Balls and paths
@@ -202,6 +204,7 @@ namespace PASS3
             arrow[LEFT] = Content.Load<Texture2D>("Sprites/LeftArrow");
             arrow[RIGHT] = Content.Load<Texture2D>("Sprites/RightArrow");
             easterEggImg = Content.Load<Texture2D>("Sprites/69");
+            healthImg = Content.Load<Texture2D>("Sprites/Heart");
             
             //Load fonts
             font = Content.Load<SpriteFont>("Fonts/Font");
@@ -430,7 +433,7 @@ namespace PASS3
                     
                     //Update animations
                     easterEggAnim.Update(gameTime);
-                    //Center text 
+                    //Update locations based on score to keep everything centered 
                     deathMsgLoc = new Vector2((screenHeight / 2) - (font.MeasureString("GAME OVER").X / 2), (screenHeight / 4)- (font.MeasureString("GAME OVER").Y / 2));
                     deathPointsLoc[0] = new Vector2((screenHeight / 2) - (font.MeasureString("You got " + hits + " ball!").X / 2), (screenHeight / 2) - (font.MeasureString("You got " + hits + " ball!").Y / 2));
                     deathPointsLoc[1] = new Vector2((screenHeight / 2) - (font.MeasureString("You got " + hits + " balls!").X / 2), (screenHeight / 2) - (font.MeasureString("You got " + hits + " balls!").Y / 2));
@@ -475,6 +478,7 @@ namespace PASS3
         {
 
             spriteBatch.Begin();
+            GraphicsDevice.Clear(randomColour[randomColourNum]);
             switch (gamestate)
             {
                 case MENU:
@@ -512,6 +516,16 @@ namespace PASS3
                     spriteBatch.Draw(arrow[selectedArrow], arrowRec, randomColour[randomColourNum]);
                     for (int i = 0; i < NUMBULLETS; i++)
                         spriteBatch.Draw(ballImg, bulletRec[i], randomColour[randomColourNum]);
+                    
+                    //Draw health
+                    for (int i = 0; i < LIVES; i++)
+                    {
+                        spriteBatch.Draw(healthImg, healthDisplayRec[i], Color.White);
+                        spriteBatch.Draw(healthImg, healthDisplayRec[i], Color.Black * 0.75f);
+                    }
+                        
+                    for (int i = 0; i < lives; i++)
+                        spriteBatch.Draw(healthImg, healthDisplayRec[i], Color.White);
 
                     
                     //TEST
@@ -581,9 +595,23 @@ namespace PASS3
             bulletSpawns[2] = new Rectangle(Convert.ToInt32((screenHeight / 2) - (screenHeight / 24) - (8 * scale)),Convert.ToInt32((screenHeight / 2) - (int)(4 * scale)),(int)(8 * scale),(int)(8 * scale));
             bulletSpawns[3] = new Rectangle(Convert.ToInt32((screenHeight / 2) + (screenHeight / 24) ),Convert.ToInt32((screenHeight / 2) - (4 * scale)),(int)(8 * scale),(int)(8 * scale));
             
+            //Health display
+            for (int i = 0; i < LIVES; i++)
+                healthDisplayRec[i] = new Rectangle((int)((32 * scale) * i), 0, Convert.ToInt32(32 * scale), Convert.ToInt32(32 * scale));
             
+            //Animations
             easterEggAnim = new Animation(easterEggImg, 5, 9, 44, 0, Animation.NO_IDLE, Animation.ANIMATE_FOREVER, 5, easterEggPos, 1.4f, true);
             
+            //For the end gamestate 
+            //Set locations to avoid glitching on the first death
+            deathMsgLoc = new Vector2((screenHeight / 2) - (font.MeasureString("GAME OVER").X / 2), (screenHeight / 4)- (font.MeasureString("GAME OVER").Y / 2));
+            deathPointsLoc[0] = new Vector2((screenHeight / 2) - (font.MeasureString("You got " + hits + " ball!").X / 2), (screenHeight / 2) - (font.MeasureString("You got " + hits + " ball!").Y / 2));
+            deathPointsLoc[1] = new Vector2((screenHeight / 2) - (font.MeasureString("You got " + hits + " balls!").X / 2), (screenHeight / 2) - (font.MeasureString("You got " + hits + " balls!").Y / 2));
+            restartMsgLoc = new Vector2((screenHeight / 2) - (font.MeasureString("Press R to restart or C to close").X / 2), (screenHeight / 4) * 3  - (font.MeasureString("Press R to restart or C to close").Y / 2));
+            easterEggMsgLoc = new Vector2((screenHeight / 2) - (font.MeasureString("HAHA YOU GOT FUNNY NUMBER").X / 2), screenHeight  - font.MeasureString("HAHA YOU GOT FUNNY NUMBER").Y);
+
+
+            //Store the final screen size
             finalScreenSize = screenHeight;
             
             for (int i = 0; i < NUMBALLS; i++)
