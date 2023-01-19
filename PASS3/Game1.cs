@@ -21,6 +21,8 @@ namespace PASS3
     {
         private GraphicsDeviceManager graphics;
         private SpriteBatch spriteBatch;
+        //Make a spritebatch with no anti aliasing 
+        private SpriteBatch antiAlias;
 
         //Random number setup
         static Random rng = new Random();
@@ -84,6 +86,9 @@ namespace PASS3
         Texture2D ballImg;
         Texture2D healthImg;
         
+        //Textures for numbers
+        Texture2D[] NumImg = new Texture2D[10];
+        
         //Store arrow sprites
         Texture2D[] arrow = new Texture2D [4];
 
@@ -103,6 +108,7 @@ namespace PASS3
         Rectangle exitToMenuBtnRec;
         Rectangle playAreaRec;
         Rectangle[] healthDisplayRec = new Rectangle[LIVES];
+        Rectangle[] pointsDisplayRec = new Rectangle[3];
 
         //Game stuff
         //Balls and paths
@@ -206,6 +212,12 @@ namespace PASS3
             easterEggImg = Content.Load<Texture2D>("Sprites/69");
             healthImg = Content.Load<Texture2D>("Sprites/Heart");
             
+            //Load number textures
+            for (int i = 0; i < NumImg.Length; i++)
+            {
+                NumImg[i] = Content.Load<Texture2D>("Numbers/" + i);
+            }
+            
             //Load fonts
             font = Content.Load<SpriteFont>("Fonts/Font");
 
@@ -230,6 +242,8 @@ namespace PASS3
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+            //Make a spritebatch with no anti aliasing 
+            antiAlias = new SpriteBatch(GraphicsDevice);;
 
             // TODO: use this.Content to load your game content here
         }
@@ -476,8 +490,10 @@ namespace PASS3
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-
-            spriteBatch.Begin();
+            
+            
+            spriteBatch.Begin(SpriteSortMode.Immediate, BlendState.NonPremultiplied, SamplerState.PointClamp, DepthStencilState.Default, RasterizerState.CullCounterClockwise);
+            antiAlias.Begin();
             GraphicsDevice.Clear(randomColour[randomColourNum]);
             switch (gamestate)
             {
@@ -513,7 +529,7 @@ namespace PASS3
                     }
                     
                     spriteBatch.Draw(blank, centerRec, Color.Black);
-                    spriteBatch.Draw(arrow[selectedArrow], arrowRec, randomColour[randomColourNum]);
+                    antiAlias.Draw(arrow[selectedArrow], arrowRec, randomColour[randomColourNum]);
                     for (int i = 0; i < NUMBULLETS; i++)
                         spriteBatch.Draw(ballImg, bulletRec[i], randomColour[randomColourNum]);
                     
@@ -525,16 +541,41 @@ namespace PASS3
                     }
                         
                     for (int i = 0; i < lives; i++)
-                        spriteBatch.Draw(healthImg, healthDisplayRec[i], Color.White);
+                        spriteBatch.Draw(healthImg, healthDisplayRec[i], Color.White); 
+                    //Draw points
+                    for (int i = 0; i < pointsDisplayRec.Length; i++)
+                    {
+                        string h = Convert.ToString(hits);
+                        if (hits > 0)
+                        {
+                            spriteBatch.Draw(NumImg[Convert.ToInt32((Convert.ToString(hits)[0]).ToString())], pointsDisplayRec[0], Color.White);
+                            if(hits >= 10)
+                                spriteBatch.Draw(NumImg[Convert.ToInt32((Convert.ToString(hits)[1]).ToString())], pointsDisplayRec[1], Color.White);
+                            if(hits >= 100)
+                                spriteBatch.Draw(NumImg[Convert.ToInt32((Convert.ToString(hits)[2]).ToString())], pointsDisplayRec[2], Color.White);
 
+                        }
+                        //spriteBatch.Draw(NumImg[1], pointsDisplayRec[2], Color.White);
+                        //Console.WriteLine(i + "X:" + pointsDisplayRec[i].X);
+                    }
                     
+                    /*spriteBatch.Draw(blank, pointsDisplayRec[0], Color.White);
+                    spriteBatch.Draw(blank, pointsDisplayRec[1], Color.Orange);
+                    spriteBatch.Draw(blank, pointsDisplayRec[2], Color.Lime);*/
                     //TEST
-                    Console.WriteLine("Hits: " + hits);
+                    /*Console.WriteLine("Hits: " + hits);
                     Console.WriteLine("Misses: : " + miss);
-                    Console.WriteLine("Lives: : " + lives);
-
+                    Console.WriteLine("Lives: : " + lives);*/
+                    
+                    if(hits > 0)
+                        Console.Write(Convert.ToString(hits)[0]);
+                    if(hits > 10)
+                        Console.Write(Convert.ToString(hits)[1]);
+                    if(hits > 100)
+                        Console.Write(Convert.ToString(hits)[2]);
+                    Console.WriteLine();
                     break;
-
+                
                 case PAUSE:
                     GraphicsDevice.Clear(Color.Black);
                     spriteBatch.DrawString(font, "Game paused", pauseMsgLoc[0], Color.White);
@@ -563,6 +604,7 @@ namespace PASS3
                     spriteBatch.Draw(exitBtnImg, exitToMenuBtnRec, Color.White);
                     break;
             }
+            antiAlias.End();
             spriteBatch.End();
             // TODO: Add your drawing code here
 
@@ -610,7 +652,10 @@ namespace PASS3
             restartMsgLoc = new Vector2((screenHeight / 2) - (font.MeasureString("Press R to restart or C to close").X / 2), (screenHeight / 4) * 3  - (font.MeasureString("Press R to restart or C to close").Y / 2));
             easterEggMsgLoc = new Vector2((screenHeight / 2) - (font.MeasureString("HAHA YOU GOT FUNNY NUMBER").X / 2), screenHeight  - font.MeasureString("HAHA YOU GOT FUNNY NUMBER").Y);
 
-
+            //Store number positions
+            pointsDisplayRec[0] = new Rectangle((int)(screenHeight - (22 * scale) * 3),0,(int)(22 * scale),(int)(32 * scale));
+            pointsDisplayRec[1] = new Rectangle((int)(screenHeight - (22 * scale) * 2),0,(int)(22 * scale),(int)(32 * scale));
+            pointsDisplayRec[2] = new Rectangle((int)(screenHeight - (22 * scale)),0,(int)(22 * scale),(int)(32 * scale));
             //Store the final screen size
             finalScreenSize = screenHeight;
             
