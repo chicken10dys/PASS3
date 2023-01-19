@@ -4,64 +4,11 @@
     <projectFile>PASS3/PASS3.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="46d2bcc8-f4f0-42e7-83ee-28561d9102d5" name="Changes" comment="Added points display">
-      <change afterPath="$PROJECT_DIR$/PASS3/Content/Numbers/0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PASS3/Content/Numbers/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PASS3/Content/Numbers/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PASS3/Content/Numbers/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PASS3/Content/Numbers/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PASS3/Content/Numbers/5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PASS3/Content/Numbers/6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PASS3/Content/Numbers/7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PASS3/Content/Numbers/8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PASS3/Content/Numbers/9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Numbers/0.mgcontent" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Numbers/1.mgcontent" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Numbers/2.mgcontent" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Numbers/3.mgcontent" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Numbers/4.mgcontent" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Numbers/5.mgcontent" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Numbers/6.mgcontent" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Numbers/7.mgcontent" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Numbers/8.mgcontent" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Numbers/9.mgcontent" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Numbers/0.xnb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Numbers/1.xnb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Numbers/2.xnb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Numbers/3.xnb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Numbers/4.xnb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Numbers/5.xnb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Numbers/6.xnb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Numbers/7.xnb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Numbers/8.xnb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Numbers/9.xnb" afterDir="false" />
+    <list default="true" id="46d2bcc8-f4f0-42e7-83ee-28561d9102d5" name="Changes" comment="Cleaned up unnecessary code in the points display area">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PASS3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PASS3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/Content.mgcb" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/Content.mgcb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/.mgstats" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/.mgstats" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Fonts/Font.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Fonts/Font.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Fonts/FontXL.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Fonts/FontXL.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Fonts/mediumFont.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Fonts/mediumFont.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/69.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/69.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/Blank.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/Blank.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/DownArrow.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/DownArrow.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/ExitBtn1.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/ExitBtn1.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/Heart.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/Heart.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/Instructions.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/Instructions.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/InstructionsBtn1.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/InstructionsBtn1.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/LeftArrow.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/LeftArrow.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/NoWind.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/NoWind.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/PlayBtn1.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/PlayBtn1.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/PowerMeter.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/PowerMeter.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/RightArrow.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/RightArrow.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/UpArrow.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/UpArrow.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/WindArrowLeft.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/WindArrowLeft.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/WindArrowRight.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/WindArrowRight.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/ball.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/ball.mgcontent" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PASS3/Game1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Game1.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/PASS3.exe" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/bin/Debug/PASS3.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/PASS3.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/bin/Debug/PASS3.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/obj/Debug/PASS3.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/obj/Debug/PASS3.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PASS3/obj/Debug/PASS3.exe" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/obj/Debug/PASS3.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PASS3/obj/Debug/PASS3.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/obj/Debug/PASS3.pdb" afterDir="false" />
     </list>
@@ -208,7 +155,7 @@
       <workItem from="1674067698544" duration="974000" />
       <workItem from="1674069030375" duration="2856000" />
       <workItem from="1674088159967" duration="2342000" />
-      <workItem from="1674095593289" duration="1573000" />
+      <workItem from="1674095593289" duration="1899000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1671545012218</created>
@@ -343,7 +290,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674097614187</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Cleaned up unnecessary code in the points display area">
+      <created>1674097945640</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1674097945640</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -380,7 +334,8 @@
     <MESSAGE value="Added keybinds to all buttons. P = play, I = instructions, Escape = exit/go back" />
     <MESSAGE value="Added health display and fixed the text bug in the dealth screen" />
     <MESSAGE value="Added points display" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added points display" />
+    <MESSAGE value="Cleaned up unnecessary code in the points display area" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up unnecessary code in the points display area" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
