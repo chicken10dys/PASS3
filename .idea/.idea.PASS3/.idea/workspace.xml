@@ -4,7 +4,7 @@
     <projectFile>PASS3/PASS3.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="46d2bcc8-f4f0-42e7-83ee-28561d9102d5" name="Changes" comment="Cleaned up unnecessary code in the points display area">
+    <list default="true" id="46d2bcc8-f4f0-42e7-83ee-28561d9102d5" name="Changes" comment="Now shifts the points display over to the right as much as possible">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PASS3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PASS3/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PASS3/Game1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Game1.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/PASS3.exe" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/bin/Debug/PASS3.exe" afterDir="false" />
@@ -23,6 +23,7 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1b3500140e1c4909bb864bc920f14b3b16c400/4c/1dba6dd9/ContentManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1b3500140e1c4909bb864bc920f14b3b16c400/d4/bc57e551/Game.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///run/media/chicken10dys/Ventoy/PASS3/PASS3/Game1.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -155,7 +156,7 @@
       <workItem from="1674067698544" duration="974000" />
       <workItem from="1674069030375" duration="2856000" />
       <workItem from="1674088159967" duration="2342000" />
-      <workItem from="1674095593289" duration="1899000" />
+      <workItem from="1674095593289" duration="2302000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1671545012218</created>
@@ -297,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674097945640</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Now shifts the points display over to the right as much as possible">
+      <created>1674098349109</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1674098349109</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -335,7 +343,8 @@
     <MESSAGE value="Added health display and fixed the text bug in the dealth screen" />
     <MESSAGE value="Added points display" />
     <MESSAGE value="Cleaned up unnecessary code in the points display area" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleaned up unnecessary code in the points display area" />
+    <MESSAGE value="Now shifts the points display over to the right as much as possible" />
+    <option name="LAST_COMMIT_MESSAGE" value="Now shifts the points display over to the right as much as possible" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
