@@ -4,7 +4,37 @@
     <projectFile>PASS3/PASS3.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="46d2bcc8-f4f0-42e7-83ee-28561d9102d5" name="Changes" comment="">
+    <list default="true" id="46d2bcc8-f4f0-42e7-83ee-28561d9102d5" name="Changes" comment="Added points display">
+      <change afterPath="$PROJECT_DIR$/PASS3/Content/Numbers/0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PASS3/Content/Numbers/1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PASS3/Content/Numbers/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PASS3/Content/Numbers/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PASS3/Content/Numbers/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PASS3/Content/Numbers/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PASS3/Content/Numbers/6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PASS3/Content/Numbers/7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PASS3/Content/Numbers/8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PASS3/Content/Numbers/9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Numbers/0.mgcontent" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Numbers/1.mgcontent" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Numbers/2.mgcontent" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Numbers/3.mgcontent" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Numbers/4.mgcontent" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Numbers/5.mgcontent" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Numbers/6.mgcontent" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Numbers/7.mgcontent" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Numbers/8.mgcontent" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Numbers/9.mgcontent" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Numbers/0.xnb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Numbers/1.xnb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Numbers/2.xnb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Numbers/3.xnb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Numbers/4.xnb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Numbers/5.xnb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Numbers/6.xnb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Numbers/7.xnb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Numbers/8.xnb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Numbers/9.xnb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PASS3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PASS3/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PASS3/Content/Content.mgcb" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/Content.mgcb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/.mgcontent" afterDir="false" />
@@ -178,7 +208,7 @@
       <workItem from="1674067698544" duration="974000" />
       <workItem from="1674069030375" duration="2856000" />
       <workItem from="1674088159967" duration="2342000" />
-      <workItem from="1674095593289" duration="1371000" />
+      <workItem from="1674095593289" duration="1573000" />
     </task>
     <task id="LOCAL-00001" summary="start">
       <created>1671545012218</created>
@@ -306,7 +336,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674068796307</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Added points display">
+      <created>1674097614187</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1674097614187</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -342,7 +379,8 @@
     <MESSAGE value="Added the instructions screen" />
     <MESSAGE value="Added keybinds to all buttons. P = play, I = instructions, Escape = exit/go back" />
     <MESSAGE value="Added health display and fixed the text bug in the dealth screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added health display and fixed the text bug in the dealth screen" />
+    <MESSAGE value="Added points display" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added points display" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -543,25 +543,11 @@ namespace PASS3
                     for (int i = 0; i < lives; i++)
                         spriteBatch.Draw(healthImg, healthDisplayRec[i], Color.White); 
                     //Draw points
-                    for (int i = 0; i < pointsDisplayRec.Length; i++)
-                    {
-                        string h = Convert.ToString(hits);
-                        if (hits > 0)
-                        {
-                            spriteBatch.Draw(NumImg[Convert.ToInt32((Convert.ToString(hits)[0]).ToString())], pointsDisplayRec[0], Color.White);
-                            if(hits >= 10)
-                                spriteBatch.Draw(NumImg[Convert.ToInt32((Convert.ToString(hits)[1]).ToString())], pointsDisplayRec[1], Color.White);
-                            if(hits >= 100)
-                                spriteBatch.Draw(NumImg[Convert.ToInt32((Convert.ToString(hits)[2]).ToString())], pointsDisplayRec[2], Color.White);
-
-                        }
-                        //spriteBatch.Draw(NumImg[1], pointsDisplayRec[2], Color.White);
-                        //Console.WriteLine(i + "X:" + pointsDisplayRec[i].X);
-                    }
-                    
-                    /*spriteBatch.Draw(blank, pointsDisplayRec[0], Color.White);
-                    spriteBatch.Draw(blank, pointsDisplayRec[1], Color.Orange);
-                    spriteBatch.Draw(blank, pointsDisplayRec[2], Color.Lime);*/
+                    spriteBatch.Draw(NumImg[Convert.ToInt32((Convert.ToString(hits)[0]).ToString())], pointsDisplayRec[0], Color.White);
+                    if(hits >= 10)
+                        spriteBatch.Draw(NumImg[Convert.ToInt32((Convert.ToString(hits)[1]).ToString())], pointsDisplayRec[1], Color.White);
+                    if(hits >= 100)
+                        spriteBatch.Draw(NumImg[Convert.ToInt32((Convert.ToString(hits)[2]).ToString())], pointsDisplayRec[2], Color.White);
                     //TEST
                     /*Console.WriteLine("Hits: " + hits);
                     Console.WriteLine("Misses: : " + miss);
