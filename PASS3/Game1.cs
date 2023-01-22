@@ -451,7 +451,7 @@ namespace PASS3
                     deathMsgLoc = new Vector2((screenHeight / 2) - (font.MeasureString("GAME OVER").X / 2), (screenHeight / 4)- (font.MeasureString("GAME OVER").Y / 2));
                     deathPointsLoc[0] = new Vector2((screenHeight / 2) - (font.MeasureString("You got " + hits + " ball!").X / 2), (screenHeight / 2) - (font.MeasureString("You got " + hits + " ball!").Y / 2));
                     deathPointsLoc[1] = new Vector2((screenHeight / 2) - (font.MeasureString("You got " + hits + " balls!").X / 2), (screenHeight / 2) - (font.MeasureString("You got " + hits + " balls!").Y / 2));
-                    restartMsgLoc = new Vector2((screenHeight / 2) - (font.MeasureString("Press R to restart or C to close").X / 2), (screenHeight / 4) * 3  - (font.MeasureString("Press R to restart or C to close").Y / 2));
+                    restartMsgLoc = new Vector2((screenHeight / 2) - (font.MeasureString("Press R to restart or Escape to exit").X / 2), (screenHeight / 4) * 3  - (font.MeasureString("Press R to restart or Escape to exit").Y / 2));
                     easterEggMsgLoc = new Vector2((screenHeight / 2) - (font.MeasureString("HAHA YOU GOT FUNNY NUMBER").X / 2), screenHeight  - font.MeasureString("HAHA YOU GOT FUNNY NUMBER").Y);
                     //Check for restart
                     if (kb.IsKeyDown(Keys.R) && kb != prevKb && !prevKb.IsKeyDown(Keys.R))
@@ -463,7 +463,7 @@ namespace PASS3
                         gamestate = GAME;
                     }
                         
-                    if (kb.IsKeyDown(Keys.C) && kb != prevKb && !prevKb.IsKeyDown(Keys.C))
+                    if (kb.IsKeyDown(Keys.Escape) && kb != prevKb && !prevKb.IsKeyDown(Keys.Escape))
                         Exit();
                     break;
                 
@@ -590,7 +590,7 @@ namespace PASS3
                         spriteBatch.DrawString(font, "You got " + hits + " ball!", deathPointsLoc[0], Color.White);
                     else
                         spriteBatch.DrawString(font, "You got " + hits + " balls!", deathPointsLoc[1], Color.White);
-                    spriteBatch.DrawString(font, "Press R to restart or C to close", restartMsgLoc, Color.Red);
+                    spriteBatch.DrawString(font, "Press R to restart or Escape to exit", restartMsgLoc, Color.Red);
                     
                     break;
                 
@@ -645,7 +645,7 @@ namespace PASS3
             deathMsgLoc = new Vector2((screenHeight / 2) - (font.MeasureString("GAME OVER").X / 2), (screenHeight / 4)- (font.MeasureString("GAME OVER").Y / 2));
             deathPointsLoc[0] = new Vector2((screenHeight / 2) - (font.MeasureString("You got " + hits + " ball!").X / 2), (screenHeight / 2) - (font.MeasureString("You got " + hits + " ball!").Y / 2));
             deathPointsLoc[1] = new Vector2((screenHeight / 2) - (font.MeasureString("You got " + hits + " balls!").X / 2), (screenHeight / 2) - (font.MeasureString("You got " + hits + " balls!").Y / 2));
-            restartMsgLoc = new Vector2((screenHeight / 2) - (font.MeasureString("Press R to restart or C to close").X / 2), (screenHeight / 4) * 3  - (font.MeasureString("Press R to restart or C to close").Y / 2));
+            restartMsgLoc = new Vector2((screenHeight / 2) - (font.MeasureString("Press R to restart or Escape to exit").X / 2), (screenHeight / 4) * 3  - (font.MeasureString("Press R to restart or Escape to exit").Y / 2));
             easterEggMsgLoc = new Vector2((screenHeight / 2) - (font.MeasureString("HAHA YOU GOT FUNNY NUMBER").X / 2), screenHeight  - font.MeasureString("HAHA YOU GOT FUNNY NUMBER").Y);
 
             //Store number positions
