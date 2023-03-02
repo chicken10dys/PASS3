@@ -2,213 +2,68 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="892f3dd2-0dc1-4b31-8169-e6e214467baf" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.PASS3/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.PASS3/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PASS3/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PASS3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PASS3/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/PASS3/v15/.suo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/PASS3/v15/Server/sqlite3/db.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/PASS3/v15/Server/sqlite3/storage.ide" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3.sln" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/App.config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/Content.mgcb" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/Content.mgcb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/Fonts/Font.spritefont" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/Fonts/Font.spritefont" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/Fonts/FontXL.spritefont" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/Fonts/FontXL.spritefont" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/Fonts/mediumFont.spritefont" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/Fonts/mediumFont.spritefont" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/Numbers/0.png" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/Numbers/0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/Numbers/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/Numbers/1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/Numbers/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/Numbers/2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/Numbers/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/Numbers/3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/Numbers/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/Numbers/4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/Numbers/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/Numbers/5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/Numbers/6.png" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/Numbers/6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/Numbers/7.png" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/Numbers/7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/Numbers/8.png" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/Numbers/8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/Numbers/9.png" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/Numbers/9.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/Sprites/69.png" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/Sprites/69.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/Sprites/Blank.png" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/Sprites/Blank.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/Sprites/DownArrow.png" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/Sprites/DownArrow.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/Sprites/ExitBtn1.png" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/Sprites/ExitBtn1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/Sprites/Heart.png" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/Sprites/Heart.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/Sprites/Instructions.png" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/Sprites/Instructions.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/Sprites/InstructionsBtn1.png" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/Sprites/InstructionsBtn1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/Sprites/LeftArrow.png" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/Sprites/LeftArrow.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/Sprites/NoWind.png" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/Sprites/NoWind.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/Sprites/PlayBtn1.png" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/Sprites/PlayBtn1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/Sprites/PowerMeter.png" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/Sprites/PowerMeter.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/Sprites/RightArrow.png" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/Sprites/RightArrow.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/Sprites/UpArrow.png" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/Sprites/UpArrow.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/Sprites/WindArrowLeft.png" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/Sprites/WindArrowLeft.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/Sprites/WindArrowRight.png" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/Sprites/WindArrowRight.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/Sprites/ball.png" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/Sprites/ball.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/.mgstats" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/.mgstats" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Fonts/Font.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Fonts/Font.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Fonts/FontXL.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Fonts/FontXL.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Fonts/mediumFont.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Fonts/mediumFont.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Numbers/0.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Numbers/0.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Numbers/1.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Numbers/1.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Numbers/2.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Numbers/2.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Numbers/3.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Numbers/3.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Numbers/4.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Numbers/4.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Numbers/5.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Numbers/5.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Numbers/6.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Numbers/6.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Numbers/7.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Numbers/7.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Numbers/8.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Numbers/8.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Numbers/9.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Numbers/9.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/69.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/69.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/Blank.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/Blank.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/BlueBucket.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/BlueBucket.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/DownArrow.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/DownArrow.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/ExitBtn1.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/ExitBtn1.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/GreenBucket.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/GreenBucket.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/Heart.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/Heart.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/Instructions.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/Instructions.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/InstructionsBtn1.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/InstructionsBtn1.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/LeftArrow.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/LeftArrow.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/NoWind.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/NoWind.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/PlayBtn1.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/PlayBtn1.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/PowerArrow.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/PowerArrow.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/PowerMeter.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/PowerMeter.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/RedBucket.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/RedBucket.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/RightArrow.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/RightArrow.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/UpArrow.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/UpArrow.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/WindArrowLeft.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/WindArrowLeft.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/WindArrowRight.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/WindArrowRight.mgcontent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/ball.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/Sprites/ball.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/bin/DesktopGL/Content/Fonts/Font.xnb" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/bin/DesktopGL/Content/Fonts/Font.xnb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/bin/DesktopGL/Content/Fonts/FontXL.xnb" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/bin/DesktopGL/Content/Fonts/FontXL.xnb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/bin/DesktopGL/Content/Fonts/mediumFont.xnb" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/bin/DesktopGL/Content/Fonts/mediumFont.xnb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/.mgstats" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/.mgstats" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Fonts/Font.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Fonts/Font.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Fonts/FontXL.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Fonts/FontXL.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Fonts/mediumFont.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Fonts/mediumFont.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Numbers/0.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Numbers/0.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Numbers/1.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Numbers/1.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Numbers/2.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Numbers/2.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Numbers/3.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Numbers/3.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Numbers/4.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Numbers/4.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Numbers/5.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Numbers/5.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Numbers/6.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Numbers/6.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Numbers/7.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Numbers/7.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Numbers/8.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Numbers/8.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Numbers/9.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Numbers/9.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Sprites/69.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Sprites/69.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Sprites/Blank.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Sprites/Blank.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Sprites/DownArrow.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Sprites/DownArrow.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Sprites/ExitBtn1.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Sprites/ExitBtn1.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Sprites/Heart.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Sprites/Heart.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Sprites/Instructions.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Sprites/Instructions.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Sprites/InstructionsBtn1.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Sprites/InstructionsBtn1.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Sprites/LeftArrow.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Sprites/LeftArrow.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Sprites/NoWind.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Sprites/NoWind.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Sprites/PlayBtn1.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Sprites/PlayBtn1.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Sprites/PowerMeter.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Sprites/PowerMeter.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Sprites/RightArrow.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Sprites/RightArrow.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Sprites/UpArrow.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Sprites/UpArrow.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Sprites/WindArrowLeft.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Sprites/WindArrowLeft.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Sprites/WindArrowRight.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Sprites/WindArrowRight.mgcontent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Sprites/ball.mgcontent" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Content/obj/DesktopGL/net6.0/Content/Sprites/ball.mgcontent" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PASS3/Game1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Game1.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Icon.bmp" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Icon.bmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Icon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Icon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Libraries/Animation2D.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Libraries/Animation2D.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/PASS3.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/Properties/AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/Animation2D.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Fonts/Font.xnb" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Fonts/Font.xnb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Fonts/FontXL.xnb" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Fonts/FontXL.xnb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Fonts/mediumFont.xnb" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Fonts/mediumFont.xnb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Numbers/0.xnb" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Numbers/0.xnb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Numbers/1.xnb" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Numbers/1.xnb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Numbers/2.xnb" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Numbers/2.xnb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Numbers/3.xnb" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Numbers/3.xnb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Numbers/4.xnb" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Numbers/4.xnb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Numbers/5.xnb" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Numbers/5.xnb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Numbers/6.xnb" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Numbers/6.xnb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Numbers/7.xnb" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Numbers/7.xnb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Numbers/8.xnb" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Numbers/8.xnb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Numbers/9.xnb" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Numbers/9.xnb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Sprites/69.xnb" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Sprites/69.xnb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Sprites/Blank.xnb" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Sprites/Blank.xnb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Sprites/DownArrow.xnb" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Sprites/DownArrow.xnb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Sprites/ExitBtn1.xnb" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Sprites/ExitBtn1.xnb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Sprites/Heart.xnb" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Sprites/Heart.xnb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Sprites/Instructions.xnb" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Sprites/Instructions.xnb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Sprites/InstructionsBtn1.xnb" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Sprites/InstructionsBtn1.xnb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Sprites/LeftArrow.xnb" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Sprites/LeftArrow.xnb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Sprites/NoWind.xnb" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Sprites/NoWind.xnb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Sprites/PlayBtn1.xnb" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Sprites/PlayBtn1.xnb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Sprites/PowerArrow.xnb" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Sprites/PowerArrow.xnb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Sprites/PowerMeter.xnb" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Sprites/PowerMeter.xnb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Sprites/RightArrow.xnb" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Sprites/RightArrow.xnb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Sprites/UpArrow.xnb" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Sprites/UpArrow.xnb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Sprites/WindArrowLeft.xnb" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Sprites/WindArrowLeft.xnb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Sprites/WindArrowRight.xnb" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Sprites/WindArrowRight.xnb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Sprites/ball.xnb" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/bin/Debug/Content/Sprites/ball.xnb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/MonoGame.Framework.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/MonoGame.Framework.dll.config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/MonoGame.Framework.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/PASS3.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/PASS3.exe.config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/PASS3.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/libSDL2-2.0.0.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/libopenal.1.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/x64/SDL2.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/x64/libSDL2-2.0.so.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/x64/libopenal.so.1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/x64/soft_oal.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/x86/SDL2.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/x86/libSDL2-2.0.so.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/x86/libopenal.so.1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/x86/soft_oal.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Game v1.1.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Game v1.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Release/Animation2D.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Release/Content/Fonts/Font.xnb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Release/Content/Fonts/FontXL.xnb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Release/Content/Fonts/mediumFont.xnb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Release/Content/Sprites/Blank.xnb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Release/Content/Sprites/BlueBucket.xnb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Release/Content/Sprites/DownArrow.xnb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Release/Content/Sprites/ExitBtn1.xnb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Release/Content/Sprites/GreenBucket.xnb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Release/Content/Sprites/LeftArrow.xnb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Release/Content/Sprites/NoWind.xnb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Release/Content/Sprites/PlayBtn1.xnb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Release/Content/Sprites/PowerArrow.xnb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Release/Content/Sprites/PowerMeter.xnb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Release/Content/Sprites/RedBucket.xnb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Release/Content/Sprites/RightArrow.xnb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Release/Content/Sprites/UpArrow.xnb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Release/Content/Sprites/WindArrowLeft.xnb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Release/Content/Sprites/WindArrowRight.xnb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Release/Content/Sprites/ball.xnb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Release/MonoGame.Framework.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Release/MonoGame.Framework.dll.config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Release/MonoGame.Framework.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Release/PASS3.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Release/PASS3.exe.config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Release/PASS3.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Release/libSDL2-2.0.0.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Release/libopenal.1.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Release/x64/SDL2.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Release/x64/libSDL2-2.0.so.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Release/x64/libopenal.so.1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Release/x64/soft_oal.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Release/x86/SDL2.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Release/x86/libSDL2-2.0.so.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Release/x86/libopenal.so.1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/bin/Release/x86/soft_oal.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/obj/Debug/.NETFramework,Version=v4.6.1.AssemblyAttributes.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/obj/Debug/PASS3.csproj.CopyComplete" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/obj/Debug/PASS3.csproj.CoreCompileInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/obj/Debug/PASS3.csproj.FileListAbsolute.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/obj/Debug/PASS3.csprojAssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/obj/Debug/PASS3.csprojResolveAssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/obj/Debug/PASS3.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/obj/Debug/PASS3.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/obj/Debug/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/obj/Debug/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/obj/Debug/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/obj/Release/.NETFramework,Version=v4.6.1.AssemblyAttributes.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/obj/Release/PASS3.csproj.CopyComplete" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/obj/Release/PASS3.csproj.CoreCompileInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/obj/Release/PASS3.csproj.FileListAbsolute.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/obj/Release/PASS3.csprojAssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/obj/Release/PASS3.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/obj/Release/PASS3.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/PASS3/packages.config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/MonoGame.Framework.DesktopGL.3.7.0.1708/.signature.p7s" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/MonoGame.Framework.DesktopGL.3.7.0.1708/MonoGame.Framework.DesktopGL.3.7.0.1708.nupkg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/MonoGame.Framework.DesktopGL.3.7.0.1708/build/MonoGame.Framework.DesktopGL.targets" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/MonoGame.Framework.DesktopGL.3.7.0.1708/build/native/MonoGame.Framework.dll.config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/MonoGame.Framework.DesktopGL.3.7.0.1708/build/native/libSDL2-2.0.0.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/MonoGame.Framework.DesktopGL.3.7.0.1708/build/native/libopenal.1.dylib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/MonoGame.Framework.DesktopGL.3.7.0.1708/build/native/x64/SDL2.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/MonoGame.Framework.DesktopGL.3.7.0.1708/build/native/x64/libSDL2-2.0.so.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/MonoGame.Framework.DesktopGL.3.7.0.1708/build/native/x64/libopenal.so.1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/MonoGame.Framework.DesktopGL.3.7.0.1708/build/native/x64/soft_oal.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/MonoGame.Framework.DesktopGL.3.7.0.1708/build/native/x86/SDL2.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/MonoGame.Framework.DesktopGL.3.7.0.1708/build/native/x86/libSDL2-2.0.so.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/MonoGame.Framework.DesktopGL.3.7.0.1708/build/native/x86/libopenal.so.1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/MonoGame.Framework.DesktopGL.3.7.0.1708/build/native/x86/soft_oal.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/MonoGame.Framework.DesktopGL.3.7.0.1708/lib/net45/MonoGame.Framework.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/MonoGame.Framework.DesktopGL.3.7.0.1708/lib/net45/MonoGame.Framework.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/net6.0/Content/Fonts/Font.xnb" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/bin/Debug/net6.0/Content/Fonts/Font.xnb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/net6.0/Content/Fonts/FontXL.xnb" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/bin/Debug/net6.0/Content/Fonts/FontXL.xnb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/net6.0/Content/Fonts/mediumFont.xnb" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/bin/Debug/net6.0/Content/Fonts/mediumFont.xnb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/net6.0/PASS3" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/bin/Debug/net6.0/PASS3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/net6.0/PASS3.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/bin/Debug/net6.0/PASS3.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/bin/Debug/net6.0/PASS3.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/bin/Debug/net6.0/PASS3.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/obj/Debug/net6.0/PASS3.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/obj/Debug/net6.0/PASS3.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/obj/Debug/net6.0/PASS3.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/obj/Debug/net6.0/PASS3.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/obj/Debug/net6.0/PASS3.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/obj/Debug/net6.0/PASS3.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/obj/Debug/net6.0/PASS3.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/obj/Debug/net6.0/PASS3.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/obj/Debug/net6.0/PASS3.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/obj/Debug/net6.0/PASS3.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/obj/Debug/net6.0/apphost" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/obj/Debug/net6.0/apphost" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/obj/Debug/net6.0/ref/PASS3.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/obj/Debug/net6.0/ref/PASS3.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/obj/Debug/net6.0/refint/PASS3.dll" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/obj/Debug/net6.0/refint/PASS3.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/obj/PASS3.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/obj/PASS3.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PASS3/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/PASS3/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="Toolset" />
@@ -263,6 +118,7 @@
       <updated>1677688311476</updated>
       <workItem from="1677688312615" duration="40000" />
       <workItem from="1677688358879" duration="48000" />
+      <workItem from="1677706462660" duration="1734000" />
     </task>
     <servers />
   </component>

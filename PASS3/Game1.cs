@@ -10,6 +10,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
+
+using System.Text.Json;
+using System.Text.Json.Serialization;
 //using Microsoft.Xna.Framework.Content.Pipeline.Serialization.Compiler;
 
 namespace PASS3
@@ -17,8 +20,16 @@ namespace PASS3
     /// <summary>
     /// This is the main type for your game.
     /// </summary>
+    ///
+    public class JsonData
+    {
+        public int? highScore { get; set; }
+    }
     public class Game1 : Game
     {
+        //Json stuff
+        string jsonString;
+        
         private GraphicsDeviceManager graphics;
         private SpriteBatch spriteBatch;
         //Make a spritebatch with no anti aliasing 
@@ -128,6 +139,7 @@ namespace PASS3
         Vector2 warningLoc;
         Vector2 deathMsgLoc;
         Vector2[] deathPointsLoc = new Vector2[2];
+        Vector2[] deathHighLoc = new Vector2[2];
         Vector2 restartMsgLoc;
         Vector2[] pauseMsgLoc = new Vector2[2];
         Vector2 easterEggMsgLoc;
@@ -162,6 +174,9 @@ namespace PASS3
         int hits;
         int miss;
         int lives = LIVES; 
+        
+        int highScoreJson;
+        int highScore;
 
         public Game1()
         {
@@ -178,6 +193,9 @@ namespace PASS3
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
+            
+            //Load previous save
+            LoadSave();
             
             //Make window borderless
             Window.IsBorderless = true;
@@ -423,9 +441,16 @@ namespace PASS3
                     CheckBallDeath();
                     
                     //Check for game over
-                    if(lives <= 0)
-                    //if(hits == 69)
+                    if (lives <= 0)
+                    {
+                        if (hits > highScore)
+                        {
+                            highScore = hits;
+                            Save();
+                        }
                         gamestate = END;
+                    }
+                        
                     
                     break;
 
@@ -448,10 +473,13 @@ namespace PASS3
                     //Update animations
                     easterEggAnim.Update(gameTime);
                     //Update locations based on score to keep everything centered 
-                    deathMsgLoc = new Vector2((screenHeight / 2) - (font.MeasureString("GAME OVER").X / 2), (screenHeight / 4)- (font.MeasureString("GAME OVER").Y / 2));
-                    deathPointsLoc[0] = new Vector2((screenHeight / 2) - (font.MeasureString("You got " + hits + " ball!").X / 2), (screenHeight / 2) - (font.MeasureString("You got " + hits + " ball!").Y / 2));
-                    deathPointsLoc[1] = new Vector2((screenHeight / 2) - (font.MeasureString("You got " + hits + " balls!").X / 2), (screenHeight / 2) - (font.MeasureString("You got " + hits + " balls!").Y / 2));
-                    restartMsgLoc = new Vector2((screenHeight / 2) - (font.MeasureString("Press R to restart or Escape to exit").X / 2), (screenHeight / 4) * 3  - (font.MeasureString("Press R to restart or Escape to exit").Y / 2));
+                    deathMsgLoc = new Vector2((screenHeight / 2) - (font.MeasureString("GAME OVER").X / 2), (screenHeight / 5)- (font.MeasureString("GAME OVER").Y / 2));
+                    deathPointsLoc[0] = new Vector2((screenHeight / 2) - (font.MeasureString("You got " + hits + " ball!").X / 2), (screenHeight / 5) * 2 - (font.MeasureString("You got " + hits + " ball!").Y / 2));
+                    deathPointsLoc[1] = new Vector2((screenHeight / 2) - (font.MeasureString("You got " + hits + " balls!").X / 2), (screenHeight / 5) * 2- (font.MeasureString("You got " + hits + " balls!").Y / 2));
+                    deathHighLoc[0] = new Vector2((screenHeight / 2) - (font.MeasureString("Your high score is " + highScore + "ball!").X / 2), (screenHeight / 5) * 3 - (font.MeasureString("You got " + hits + " balls!").Y / 2));
+                    deathHighLoc[1] = new Vector2((screenHeight / 2) - (font.MeasureString("Your high score is " + highScore + "balls!").X / 2), (screenHeight / 5) * 3 - (font.MeasureString("You got " + hits + " balls!").Y / 2));
+
+                    restartMsgLoc = new Vector2((screenHeight / 2) - (font.MeasureString("Press R to restart or Escape to exit").X / 2), (screenHeight / 5) * 4  - (font.MeasureString("Press R to restart or Escape to exit").Y / 2));
                     easterEggMsgLoc = new Vector2((screenHeight / 2) - (font.MeasureString("HAHA YOU GOT FUNNY NUMBER").X / 2), screenHeight  - font.MeasureString("HAHA YOU GOT FUNNY NUMBER").Y);
                     //Check for restart
                     if (kb.IsKeyDown(Keys.R) && kb != prevKb && !prevKb.IsKeyDown(Keys.R))
@@ -590,6 +618,11 @@ namespace PASS3
                         spriteBatch.DrawString(font, "You got " + hits + " ball!", deathPointsLoc[0], Color.White);
                     else
                         spriteBatch.DrawString(font, "You got " + hits + " balls!", deathPointsLoc[1], Color.White);
+                    
+                    if(highScore == 1)
+                        spriteBatch.DrawString(font, "Your high score is " + highScore + "ball!", deathHighLoc[0], Color.White);
+                    else
+                        spriteBatch.DrawString(font, "Your high score is " + highScore + " balls!", deathHighLoc[1], Color.White);
                     spriteBatch.DrawString(font, "Press R to restart or Escape to exit", restartMsgLoc, Color.Red);
                     
                     break;
@@ -766,6 +799,40 @@ namespace PASS3
             //Generate a random colour for each ball
             for (int ii = 0; ii < NUMBALLS; ii++)
                 randomBallColour[ii] = rng.Next(0,randomColour.Length);
+        }
+
+        void Save()
+        {
+            var JsonData = new JsonData
+            {
+                highScore = highScore
+            };
+            jsonString = JsonSerializer.Serialize(JsonData);
+    
+            Console.WriteLine(jsonString);
+            File.WriteAllText("Save.json", jsonString);
+        }
+
+        void LoadSave()
+        {
+            if (File.Exists("Save.json"))
+            {
+                jsonString = File.ReadAllText("Save.json");
+                JsonData jsonData = JsonSerializer.Deserialize<JsonData>(jsonString);
+                highScore = (int)jsonData.highScore;
+            }
+
+            else
+            {
+                var JsonData = new JsonData
+                {
+                    highScore = 0
+                };
+                jsonString = JsonSerializer.Serialize(JsonData);
+    
+                Console.WriteLine(jsonString);
+                File.WriteAllText("Save.json", jsonString);
+            }
         }
 
     }
