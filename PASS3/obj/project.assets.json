@@ -107,11 +107,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/chicken10dys/Documents/code/PASS3/PASS3/PASS3.csproj",
+      "projectUniqueName": "/home/chicken10dys/Documents/git/PASS3/PASS3/PASS3.csproj",
       "projectName": "PASS3",
-      "projectPath": "/home/chicken10dys/Documents/code/PASS3/PASS3/PASS3.csproj",
+      "projectPath": "/home/chicken10dys/Documents/git/PASS3/PASS3/PASS3.csproj",
       "packagesPath": "/home/chicken10dys/.nuget/packages/",
-      "outputPath": "/home/chicken10dys/Documents/code/PASS3/PASS3/obj/",
+      "outputPath": "/home/chicken10dys/Documents/git/PASS3/PASS3/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/chicken10dys/.nuget/NuGet/NuGet.Config"
@@ -153,23 +153,14 @@
           "net47",
           "net471",
           "net472",
-          "net48",
-          "net481"
+          "net48"
         ],
         "assetTargetFallback": true,
         "warn": true,
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[6.0.13, 6.0.13]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.linux-x64",
-            "version": "[6.0.13, 6.0.13]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[6.0.13, 6.0.13]"
+            "version": "[6.0.20, 6.0.20]"
           }
         ],
         "frameworkReferences": {
@@ -177,7 +168,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.102/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.120/RuntimeIdentifierGraph.json"
       }
     }
   }

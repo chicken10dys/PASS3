@@ -110,6 +110,7 @@ namespace PASS3
         
         //Fonts
         SpriteFont font;
+        SpriteFont fontXL;
 
         //UI
         Rectangle playBtnRec;
@@ -136,7 +137,7 @@ namespace PASS3
         Vector2 easterEggPos;
         
         //Vector2 for fonts
-        Vector2 warningLoc;
+        Vector2 TitleLoc;
         Vector2 deathMsgLoc;
         Vector2[] deathPointsLoc = new Vector2[2];
         Vector2[] deathHighLoc = new Vector2[2];
@@ -238,6 +239,7 @@ namespace PASS3
             
             //Load fonts
             font = Content.Load<SpriteFont>("Fonts/Font");
+            fontXL = Content.Load<SpriteFont>("Fonts/FontXL");
 
             playBtnRec = new Rectangle(((screenWidth / 2) - (playBtnImg.Width / 2)), ((screenHeight / 2) - (playBtnImg.Height / 2) - 50), playBtnImg.Width, playBtnImg.Height);
             exitBtnRec = new Rectangle(((screenWidth / 2) - (exitBtnImg.Width / 2)), ((screenHeight / 2) - (exitBtnImg.Height / 2) + 50), exitBtnImg.Width, exitBtnImg.Height);
@@ -337,7 +339,7 @@ namespace PASS3
                     instructionsBtnRec = new Rectangle(((screenWidth / 2) - (instructionsBtnImg.Width / 2)), ((screenHeight / 2) - (instructionsBtnImg.Height / 2) + (exitBtnImg.Height + 25)), instructionsBtnImg.Width, instructionsBtnImg.Height);
 
                     //Center text
-                    warningLoc = new Vector2((screenHeight / 2) - (font.MeasureString("WARNING:\nflashing colours may cause seizure").X / 2), 0);
+                    TitleLoc = new Vector2((screenHeight / 2) - (fontXL.MeasureString("Ball Blast").X / 2), screenHeight / 32);
                     
                     
                     break;
@@ -531,9 +533,9 @@ namespace PASS3
                     spriteBatch.Draw(exitBtnImg, exitBtnRec, Color.White);
                     spriteBatch.Draw(instructionsBtnImg, instructionsBtnRec, Color.White);
                     if(randomColourNum != 0)
-                        spriteBatch.DrawString(font, "WARNING:\nflashing colours may cause seizure", warningLoc, Color.Red);
+                        spriteBatch.DrawString(fontXL, "Ball blast", TitleLoc, Color.Red);
                     if(randomColourNum == 0)
-                        spriteBatch.DrawString(font, "WARNING:\nflashing colours may cause seizure", warningLoc, Color.White);
+                        spriteBatch.DrawString(fontXL, "Ball blast", TitleLoc, Color.White);
                     break;
 
                 case GAME:

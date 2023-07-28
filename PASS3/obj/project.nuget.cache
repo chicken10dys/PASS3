@@ -1,14 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "VxD6A+goVGj9BTDBw9Gq+UAN74r56QEZx/g33OkrJIWQetoRO6CgRl7ZooIF18MZb8rCb/1iTcfdlUyH/8K4ag==",
+  "dgSpecHash": "30ZeGyZ3OZpKC1lcEALbPmFbK/9/+1R/O4yvlaqx9XWfBliuiF3ya5MWTURJ4H38QHOcuyk3Lhoy9Lcl+XdMdQ==",
   "success": true,
-  "projectFilePath": "/home/chicken10dys/Documents/code/PASS3/PASS3/PASS3.csproj",
+  "projectFilePath": "/home/chicken10dys/Documents/git/PASS3/PASS3/PASS3.csproj",
   "expectedPackageFiles": [
     "/home/chicken10dys/.nuget/packages/monogame.content.builder.task/3.8.1.303/monogame.content.builder.task.3.8.1.303.nupkg.sha512",
     "/home/chicken10dys/.nuget/packages/monogame.framework.desktopgl/3.8.1.303/monogame.framework.desktopgl.3.8.1.303.nupkg.sha512",
-    "/home/chicken10dys/.nuget/packages/microsoft.netcore.app.ref/6.0.13/microsoft.netcore.app.ref.6.0.13.nupkg.sha512",
-    "/home/chicken10dys/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.13/microsoft.aspnetcore.app.ref.6.0.13.nupkg.sha512",
-    "/home/chicken10dys/.nuget/packages/microsoft.netcore.app.host.linux-x64/6.0.13/microsoft.netcore.app.host.linux-x64.6.0.13.nupkg.sha512"
+    "/home/chicken10dys/.nuget/packages/microsoft.aspnetcore.app.ref/6.0.20/microsoft.aspnetcore.app.ref.6.0.20.nupkg.sha512"
   ],
   "logs": []
 }
